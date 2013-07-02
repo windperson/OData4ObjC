@@ -1,4 +1,4 @@
-OData4ObjC edited by Elizabeth Duncan
+OData4ObjC edited by E A Duncan
 ==================
 
 This SDK is IN PROGRESS to support up to iOS 6.

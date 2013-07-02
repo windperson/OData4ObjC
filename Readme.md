@@ -1,9 +1,15 @@
+OData4ObjC edited by Elizabeth Duncan
+==================
+
+This SDK is IN PROGRESS to support up to iOS 6.
+
+
 Usage Instructions
 ==================
 
 The SDK will run on Mac OSX machines only.
 
-Documentation on how to use the OData toolkit for Objective-C can be found in the [project web site](http://odata.github.com/OData4ObjC/).
+Documentation on how to use the OData toolkit (the original version that only supported up to iOS 4) for Objective-C can be found in the [project web site](http://odata.github.com/OData4ObjC/).
 
 Getting Help
 ============
@@ -11,13 +17,14 @@ Getting Help
 Do you need help using the project, or do you want to request a feature or bug fix?
 
 * To get some help: use the [Discussions tool on our CodePlex project page](http://odataobjc.codeplex.com/discussions).
-* To request a feature or report a bug: use the [issue tracker](https://github.com/OData/OData4ObjC/issues) on gitHub.
+
+I monitor this forum.
 
 
 Contributing
 ============
 
-Fork and go. To contribute back, send us a pull request. Check out our [milestones](https://github.com/OData/OData4ObjC/issues/milestones) to see the areas where we are actively seeking help.
+Fork and go. To contribute back, send me a pull request. 
 
 Directory Structure
 ====================

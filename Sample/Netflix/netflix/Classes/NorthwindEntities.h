@@ -1,6 +1,6 @@
 /**
 *
-*Copyright 2010 OuterCurve Foundation
+*Copyright 2010 Microsoft Corp
 *
 *Licensed under the Apache License, Version 2.0 (the "License");
 *you may not use this file except in compliance with the License.
@@ -133,7 +133,7 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getCustomerTypeID , setter=setCustomerTypeID: ) NSString *m_CustomerTypeID;
+@property ( nonatomic , retain , getter=getCustomerTypeID , setter=setCustomerTypeID :) NSString *m_CustomerTypeID;
 @property ( nonatomic , retain , getter=getCustomerDesc , setter=setCustomerDesc: ) NSString *m_CustomerDesc;
 @property ( nonatomic , retain , getter=getCustomers , setter=setCustomers: )NSMutableArray *m_Customers;
 
@@ -263,13 +263,13 @@
 @property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName: ) NSString *m_CompanyName;
 @property ( nonatomic , retain , getter=getContactName , setter=setContactName: ) NSString *m_ContactName;
 @property ( nonatomic , retain , getter=getContactTitle , setter=setContactTitle: ) NSString *m_ContactTitle;
-@property ( nonatomic , retain , getter=getAddress , setter=setAddress: ) NSString *m_Address;
+@property ( nonatomic , retain , getter=getAddress , setter=setAddress :) NSString *m_Address;
 @property ( nonatomic , retain , getter=getCity , setter=setCity: ) NSString *m_City;
 @property ( nonatomic , retain , getter=getRegion , setter=setRegion: ) NSString *m_Region;
 @property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode: ) NSString *m_PostalCode;
 @property ( nonatomic , retain , getter=getCountry , setter=setCountry: ) NSString *m_Country;
 @property ( nonatomic , retain , getter=getPhone , setter=setPhone: ) NSString *m_Phone;
-@property ( nonatomic , retain , getter=getFax , setter=setFax: ) NSString *m_Fax;
+@property ( nonatomic , retain , getter=getFax , setter=setFax :) NSString *m_Fax;
 @property ( nonatomic , retain , getter=getOrders , setter=setOrders: )NSMutableArray *m_Orders;
 @property ( nonatomic , retain , getter=getCustomerDemographics , setter=setCustomerDemographics: )NSMutableArray *m_CustomerDemographics;
 
@@ -459,26 +459,26 @@
 }
 
 @property ( nonatomic , retain , getter=getEmployeeID , setter=setEmployeeID: )NSNumber *m_EmployeeID;
-@property ( nonatomic , retain , getter=getLastName , setter=setLastName: ) NSString *m_LastName;
-@property ( nonatomic , retain , getter=getFirstName , setter=setFirstName: ) NSString *m_FirstName;
-@property ( nonatomic , retain , getter=getTitle , setter=setTitle: ) NSString *m_Title;
-@property ( nonatomic , retain , getter=getTitleOfCourtesy , setter=setTitleOfCourtesy: ) NSString *m_TitleOfCourtesy;
-@property ( nonatomic , retain , getter=getBirthDate , setter=setBirthDate: )NSDate *m_BirthDate;
+@property ( nonatomic , retain , getter=getLastName , setter=setLastName :) NSString *m_LastName;
+@property ( nonatomic , retain , getter=getFirstName , setter=setFirstName :) NSString *m_FirstName;
+@property ( nonatomic , retain , getter=getTitle , setter=setTitle :) NSString *m_Title;
+@property ( nonatomic , retain , getter=getTitleOfCourtesy , setter=setTitleOfCourtesy :) NSString *m_TitleOfCourtesy;
+@property ( nonatomic , retain , getter=getBirthDate , setter=setBirthDate :)NSDate *m_BirthDate;
 @property ( nonatomic , retain , getter=getHireDate , setter=setHireDate: )NSDate *m_HireDate;
 @property ( nonatomic , retain , getter=getAddress , setter=setAddress: ) NSString *m_Address;
-@property ( nonatomic , retain , getter=getCity , setter=setCity: ) NSString *m_City;
-@property ( nonatomic , retain , getter=getRegion , setter=setRegion: ) NSString *m_Region;
-@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode: ) NSString *m_PostalCode;
-@property ( nonatomic , retain , getter=getCountry , setter=setCountry: ) NSString *m_Country;
-@property ( nonatomic , retain , getter=getHomePhone , setter=setHomePhone: ) NSString *m_HomePhone;
-@property ( nonatomic , retain , getter=getExtension , setter=setExtension: ) NSString *m_Extension;
+@property ( nonatomic , retain , getter=getCity , setter=setCity :) NSString *m_City;
+@property ( nonatomic , retain , getter=getRegion , setter=setRegion :) NSString *m_Region;
+@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode :) NSString *m_PostalCode;
+@property ( nonatomic , retain , getter=getCountry , setter=setCountry :) NSString *m_Country;
+@property ( nonatomic , retain , getter=getHomePhone , setter=setHomePhone :) NSString *m_HomePhone;
+@property ( nonatomic , retain , getter=getExtension , setter=setExtension :) NSString *m_Extension;
 @property ( nonatomic , retain , getter=getPhoto , setter=setPhoto: )NSData *m_Photo;
-@property ( nonatomic , retain , getter=getNotes , setter=setNotes: ) NSString *m_Notes;
-@property ( nonatomic , retain , getter=getReportsTo , setter=setReportsTo: )NSNumber *m_ReportsTo;
-@property ( nonatomic , retain , getter=getPhotoPath , setter=setPhotoPath: ) NSString *m_PhotoPath;
-@property ( nonatomic , retain , getter=getEmployees1 , setter=setEmployees1: )NSMutableArray *m_Employees1;
-@property ( nonatomic , retain , getter=getEmployee1 , setter=setEmployee1: )NSMutableArray *m_Employee1;
-@property ( nonatomic , retain , getter=getOrders , setter=setOrders: )NSMutableArray *m_Orders;
+@property ( nonatomic , retain , getter=getNotes , setter=setNotes :) NSString *m_Notes;
+@property ( nonatomic , retain , getter=getReportsTo , setter=setReportsTo :)NSNumber *m_ReportsTo;
+@property ( nonatomic , retain , getter=getPhotoPath , setter=setPhotoPath :) NSString *m_PhotoPath;
+@property ( nonatomic , retain , getter=getEmployees1 , setter=setEmployees1 :)NSMutableArray *m_Employees1;
+@property ( nonatomic , retain , getter=getEmployee1 , setter=setEmployee1 :)NSMutableArray *m_Employee1;
+@property ( nonatomic , retain , getter=getOrders , setter=setOrders :)NSMutableArray *m_Orders;
 @property ( nonatomic , retain , getter=getTerritories , setter=setTerritories: )NSMutableArray *m_Territories;
 
 + (id) CreateEmployeeWithemployeeid:(NSNumber *)aEmployeeID lastname:(NSString *)aLastName firstname:(NSString *)aFirstName;
@@ -549,13 +549,13 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getProductID , setter=setProductID: )NSNumber *m_ProductID;
-@property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice: )NSDecimalNumber *m_UnitPrice;
-@property ( nonatomic , retain , getter=getQuantity , setter=setQuantity: )NSNumber *m_Quantity;
+@property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice :)NSDecimalNumber *m_UnitPrice;
+@property ( nonatomic , retain , getter=getQuantity , setter=setQuantity :)NSNumber *m_Quantity;
 @property ( nonatomic , retain , getter=getDiscount , setter=setDiscount: )NSDecimalNumber *m_Discount;
 @property ( nonatomic , retain , getter=getOrder , setter=setOrder: )NSMutableArray *m_Order;
-@property ( nonatomic , retain , getter=getProduct , setter=setProduct: )NSMutableArray *m_Product;
+@property ( nonatomic , retain , getter=getProduct , setter=setProduct :)NSMutableArray *m_Product;
 
 + (id) CreateOrder_DetailWithorderid:(NSNumber *)aOrderID productid:(NSNumber *)aProductID unitprice:(NSDecimalNumber *)aUnitPrice quantity:(NSNumber *)aQuantity discount:(NSDecimalNumber *)aDiscount;
 - (id) init;
@@ -704,24 +704,24 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getCustomerID , setter=setCustomerID: ) NSString *m_CustomerID;
 @property ( nonatomic , retain , getter=getEmployeeID , setter=setEmployeeID: )NSNumber *m_EmployeeID;
-@property ( nonatomic , retain , getter=getOrderDate , setter=setOrderDate: )NSDate *m_OrderDate;
+@property ( nonatomic , retain , getter=getOrderDate , setter=setOrderDate :)NSDate *m_OrderDate;
 @property ( nonatomic , retain , getter=getRequiredDate , setter=setRequiredDate: )NSDate *m_RequiredDate;
 @property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate: )NSDate *m_ShippedDate;
-@property ( nonatomic , retain , getter=getShipVia , setter=setShipVia: )NSNumber *m_ShipVia;
-@property ( nonatomic , retain , getter=getFreight , setter=setFreight: )NSDecimalNumber *m_Freight;
-@property ( nonatomic , retain , getter=getShipName , setter=setShipName: ) NSString *m_ShipName;
-@property ( nonatomic , retain , getter=getShipAddress , setter=setShipAddress: ) NSString *m_ShipAddress;
-@property ( nonatomic , retain , getter=getShipCity , setter=setShipCity: ) NSString *m_ShipCity;
-@property ( nonatomic , retain , getter=getShipRegion , setter=setShipRegion: ) NSString *m_ShipRegion;
-@property ( nonatomic , retain , getter=getShipPostalCode , setter=setShipPostalCode: ) NSString *m_ShipPostalCode;
-@property ( nonatomic , retain , getter=getShipCountry , setter=setShipCountry: ) NSString *m_ShipCountry;
+@property ( nonatomic , retain , getter=getShipVia , setter=setShipVia :)NSNumber *m_ShipVia;
+@property ( nonatomic , retain , getter=getFreight , setter=setFreight :)NSDecimalNumber *m_Freight;
+@property ( nonatomic , retain , getter=getShipName , setter=setShipName :) NSString *m_ShipName;
+@property ( nonatomic , retain , getter=getShipAddress , setter=setShipAddress :) NSString *m_ShipAddress;
+@property ( nonatomic , retain , getter=getShipCity , setter=setShipCity :) NSString *m_ShipCity;
+@property ( nonatomic , retain , getter=getShipRegion , setter=setShipRegion :) NSString *m_ShipRegion;
+@property ( nonatomic , retain , getter=getShipPostalCode , setter=setShipPostalCode :) NSString *m_ShipPostalCode;
+@property ( nonatomic , retain , getter=getShipCountry , setter=setShipCountry :) NSString *m_ShipCountry;
 @property ( nonatomic , retain , getter=getCustomer , setter=setCustomer: )NSMutableArray *m_Customer;
-@property ( nonatomic , retain , getter=getEmployee , setter=setEmployee: )NSMutableArray *m_Employee;
-@property ( nonatomic , retain , getter=getOrder_Details , setter=setOrder_Details: )NSMutableArray *m_Order_Details;
-@property ( nonatomic , retain , getter=getShipper , setter=setShipper: )NSMutableArray *m_Shipper;
+@property ( nonatomic , retain , getter=getEmployee , setter=setEmployee :)NSMutableArray *m_Employee;
+@property ( nonatomic , retain , getter=getOrder_Details , setter=setOrder_Details :)NSMutableArray *m_Order_Details;
+@property ( nonatomic , retain , getter=getShipper , setter=setShipper :)NSMutableArray *m_Shipper;
 
 + (id) CreateOrderWithorderid:(NSNumber *)aOrderID;
 - (id) init;
@@ -830,19 +830,19 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getProductID , setter=setProductID: )NSNumber *m_ProductID;
-@property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
-@property ( nonatomic , retain , getter=getSupplierID , setter=setSupplierID: )NSNumber *m_SupplierID;
+@property ( nonatomic , retain , getter=getProductID , setter=setProductID :)NSNumber *m_ProductID;
+@property ( nonatomic , retain , getter=getProductName , setter=setProductName :) NSString *m_ProductName;
+@property ( nonatomic , retain , getter=getSupplierID , setter=setSupplierID :)NSNumber *m_SupplierID;
 @property ( nonatomic , retain , getter=getCategoryID , setter=setCategoryID: )NSNumber *m_CategoryID;
-@property ( nonatomic , retain , getter=getQuantityPerUnit , setter=setQuantityPerUnit: ) NSString *m_QuantityPerUnit;
+@property ( nonatomic , retain , getter=getQuantityPerUnit , setter=setQuantityPerUnit :) NSString *m_QuantityPerUnit;
 @property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice: )NSDecimalNumber *m_UnitPrice;
-@property ( nonatomic , retain , getter=getUnitsInStock , setter=setUnitsInStock: )NSNumber *m_UnitsInStock;
-@property ( nonatomic , retain , getter=getUnitsOnOrder , setter=setUnitsOnOrder: )NSNumber *m_UnitsOnOrder;
-@property ( nonatomic , retain , getter=getReorderLevel , setter=setReorderLevel: )NSNumber *m_ReorderLevel;
-@property ( nonatomic , retain , getter=getDiscontinued , setter=setDiscontinued: )ODataBool *m_Discontinued;
-@property ( nonatomic , retain , getter=getCategory , setter=setCategory: )NSMutableArray *m_Category;
-@property ( nonatomic , retain , getter=getOrder_Details , setter=setOrder_Details: )NSMutableArray *m_Order_Details;
-@property ( nonatomic , retain , getter=getSupplier , setter=setSupplier: )NSMutableArray *m_Supplier;
+@property ( nonatomic , retain , getter=getUnitsInStock , setter=setUnitsInStock :)NSNumber *m_UnitsInStock;
+@property ( nonatomic , retain , getter=getUnitsOnOrder , setter=setUnitsOnOrder :)NSNumber *m_UnitsOnOrder;
+@property ( nonatomic , retain , getter=getReorderLevel , setter=setReorderLevel :)NSNumber *m_ReorderLevel;
+@property ( nonatomic , retain , getter=getDiscontinued , setter=setDiscontinued :)ODataBool *m_Discontinued;
+@property ( nonatomic , retain , getter=getCategory , setter=setCategory :)NSMutableArray *m_Category;
+@property ( nonatomic , retain , getter=getOrder_Details , setter=setOrder_Details :)NSMutableArray *m_Order_Details;
+@property ( nonatomic , retain , getter=getSupplier , setter=setSupplier :)NSMutableArray *m_Supplier;
 
 + (id) CreateProductWithproductid:(NSNumber *)aProductID productname:(NSString *)aProductName discontinued:(ODataBool *)aDiscontinued;
 - (id) init;
@@ -937,8 +937,8 @@
 }
 
 @property ( nonatomic , retain , getter=getShipperID , setter=setShipperID: )NSNumber *m_ShipperID;
-@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName: ) NSString *m_CompanyName;
-@property ( nonatomic , retain , getter=getPhone , setter=setPhone: ) NSString *m_Phone;
+@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName :) NSString *m_CompanyName;
+@property ( nonatomic , retain , getter=getPhone , setter=setPhone :) NSString *m_Phone;
 @property ( nonatomic , retain , getter=getOrders , setter=setOrders: )NSMutableArray *m_Orders;
 
 + (id) CreateShipperWithshipperid:(NSNumber *)aShipperID companyname:(NSString *)aCompanyName;
@@ -1061,19 +1061,19 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getSupplierID , setter=setSupplierID: )NSNumber *m_SupplierID;
-@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName: ) NSString *m_CompanyName;
-@property ( nonatomic , retain , getter=getContactName , setter=setContactName: ) NSString *m_ContactName;
-@property ( nonatomic , retain , getter=getContactTitle , setter=setContactTitle: ) NSString *m_ContactTitle;
-@property ( nonatomic , retain , getter=getAddress , setter=setAddress: ) NSString *m_Address;
-@property ( nonatomic , retain , getter=getCity , setter=setCity: ) NSString *m_City;
-@property ( nonatomic , retain , getter=getRegion , setter=setRegion: ) NSString *m_Region;
-@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode: ) NSString *m_PostalCode;
-@property ( nonatomic , retain , getter=getCountry , setter=setCountry: ) NSString *m_Country;
-@property ( nonatomic , retain , getter=getPhone , setter=setPhone: ) NSString *m_Phone;
+@property ( nonatomic , retain , getter=getSupplierID , setter=setSupplierID :)NSNumber *m_SupplierID;
+@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName :) NSString *m_CompanyName;
+@property ( nonatomic , retain , getter=getContactName , setter=setContactName :) NSString *m_ContactName;
+@property ( nonatomic , retain , getter=getContactTitle , setter=setContactTitle :) NSString *m_ContactTitle;
+@property ( nonatomic , retain , getter=getAddress , setter=setAddress :) NSString *m_Address;
+@property ( nonatomic , retain , getter=getCity , setter=setCity :) NSString *m_City;
+@property ( nonatomic , retain , getter=getRegion , setter=setRegion :) NSString *m_Region;
+@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode :) NSString *m_PostalCode;
+@property ( nonatomic , retain , getter=getCountry , setter=setCountry :) NSString *m_Country;
+@property ( nonatomic , retain , getter=getPhone , setter=setPhone :) NSString *m_Phone;
 @property ( nonatomic , retain , getter=getFax , setter=setFax: ) NSString *m_Fax;
-@property ( nonatomic , retain , getter=getHomePage , setter=setHomePage: ) NSString *m_HomePage;
-@property ( nonatomic , retain , getter=getProducts , setter=setProducts: )NSMutableArray *m_Products;
+@property ( nonatomic , retain , getter=getHomePage , setter=setHomePage :) NSString *m_HomePage;
+@property ( nonatomic , retain , getter=getProducts , setter=setProducts :)NSMutableArray *m_Products;
 
 + (id) CreateSupplierWithsupplierid:(NSNumber *)aSupplierID companyname:(NSString *)aCompanyName;
 - (id) init;
@@ -1132,10 +1132,10 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getTerritoryID , setter=setTerritoryID: ) NSString *m_TerritoryID;
-@property ( nonatomic , retain , getter=getTerritoryDescription , setter=setTerritoryDescription: ) NSString *m_TerritoryDescription;
-@property ( nonatomic , retain , getter=getRegionID , setter=setRegionID: )NSNumber *m_RegionID;
-@property ( nonatomic , retain , getter=getRegion , setter=setRegion: )NSMutableArray *m_Region;
+@property ( nonatomic , retain , getter=getTerritoryID , setter=setTerritoryID :) NSString *m_TerritoryID;
+@property ( nonatomic , retain , getter=getTerritoryDescription , setter=setTerritoryDescription :) NSString *m_TerritoryDescription;
+@property ( nonatomic , retain , getter=getRegionID , setter=setRegionID :)NSNumber *m_RegionID;
+@property ( nonatomic , retain , getter=getRegion , setter=setRegion :)NSMutableArray *m_Region;
 @property ( nonatomic , retain , getter=getEmployees , setter=setEmployees: )NSMutableArray *m_Employees;
 
 + (id) CreateTerritoryWithterritoryid:(NSString *)aTerritoryID territorydescription:(NSString *)aTerritoryDescription regionid:(NSNumber *)aRegionID;
@@ -1233,17 +1233,17 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getProductID , setter=setProductID: )NSNumber *m_ProductID;
-@property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
-@property ( nonatomic , retain , getter=getSupplierID , setter=setSupplierID: )NSNumber *m_SupplierID;
-@property ( nonatomic , retain , getter=getCategoryID , setter=setCategoryID: )NSNumber *m_CategoryID;
-@property ( nonatomic , retain , getter=getQuantityPerUnit , setter=setQuantityPerUnit: ) NSString *m_QuantityPerUnit;
-@property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice: )NSDecimalNumber *m_UnitPrice;
+@property ( nonatomic , retain , getter=getProductID , setter=setProductID :)NSNumber *m_ProductID;
+@property ( nonatomic , retain , getter=getProductName , setter=setProductName :) NSString *m_ProductName;
+@property ( nonatomic , retain , getter=getSupplierID , setter=setSupplierID :)NSNumber *m_SupplierID;
+@property ( nonatomic , retain , getter=getCategoryID , setter=setCategoryID :)NSNumber *m_CategoryID;
+@property ( nonatomic , retain , getter=getQuantityPerUnit , setter=setQuantityPerUnit :) NSString *m_QuantityPerUnit;
+@property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice :)NSDecimalNumber *m_UnitPrice;
 @property ( nonatomic , retain , getter=getUnitsInStock , setter=setUnitsInStock: )NSNumber *m_UnitsInStock;
-@property ( nonatomic , retain , getter=getUnitsOnOrder , setter=setUnitsOnOrder: )NSNumber *m_UnitsOnOrder;
-@property ( nonatomic , retain , getter=getReorderLevel , setter=setReorderLevel: )NSNumber *m_ReorderLevel;
-@property ( nonatomic , retain , getter=getDiscontinued , setter=setDiscontinued: )ODataBool *m_Discontinued;
-@property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName: ) NSString *m_CategoryName;
+@property ( nonatomic , retain , getter=getUnitsOnOrder , setter=setUnitsOnOrder :)NSNumber *m_UnitsOnOrder;
+@property ( nonatomic , retain , getter=getReorderLevel , setter=setReorderLevel :)NSNumber *m_ReorderLevel;
+@property ( nonatomic , retain , getter=getDiscontinued , setter=setDiscontinued :)ODataBool *m_Discontinued;
+@property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName :) NSString *m_CategoryName;
 
 + (id) CreateAlphabetical_list_of_productWithproductid:(NSNumber *)aProductID productname:(NSString *)aProductName discontinued:(ODataBool *)aDiscontinued categoryname:(NSString *)aCategoryName;
 - (id) init;
@@ -1277,7 +1277,7 @@
 }
 
 @property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName: ) NSString *m_CategoryName;
-@property ( nonatomic , retain , getter=getCategorySales , setter=setCategorySales: )NSDecimalNumber *m_CategorySales;
+@property ( nonatomic , retain , getter=getCategorySales , setter=setCategorySales :)NSDecimalNumber *m_CategorySales;
 
 + (id) CreateCategory_Sales_for_1997Withcategoryname:(NSString *)aCategoryName;
 - (id) init;
@@ -1313,7 +1313,7 @@
 }
 
 @property ( nonatomic , retain , getter=getProductID , setter=setProductID: )NSNumber *m_ProductID;
-@property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
+@property ( nonatomic , retain , getter=getProductName , setter=setProductName :) NSString *m_ProductName;
 
 + (id) CreateCurrent_Product_ListWithproductid:(NSNumber *)aProductID productname:(NSString *)aProductName;
 - (id) init;
@@ -1366,9 +1366,9 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getCity , setter=setCity: ) NSString *m_City;
-@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName: ) NSString *m_CompanyName;
-@property ( nonatomic , retain , getter=getContactName , setter=setContactName: ) NSString *m_ContactName;
+@property ( nonatomic , retain , getter=getCity , setter=setCity :) NSString *m_City;
+@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName :) NSString *m_CompanyName;
+@property ( nonatomic , retain , getter=getContactName , setter=setContactName :) NSString *m_ContactName;
 @property ( nonatomic , retain , getter=getRelationship , setter=setRelationship: ) NSString *m_Relationship;
 
 + (id) CreateCustomer_and_Suppliers_by_CityWithcompanyname:(NSString *)aCompanyName relationship:(NSString *)aRelationship;
@@ -1593,31 +1593,31 @@
 }
 
 @property ( nonatomic , retain , getter=getShipName , setter=setShipName: ) NSString *m_ShipName;
-@property ( nonatomic , retain , getter=getShipAddress , setter=setShipAddress: ) NSString *m_ShipAddress;
-@property ( nonatomic , retain , getter=getShipCity , setter=setShipCity: ) NSString *m_ShipCity;
-@property ( nonatomic , retain , getter=getShipRegion , setter=setShipRegion: ) NSString *m_ShipRegion;
+@property ( nonatomic , retain , getter=getShipAddress , setter=setShipAddress :) NSString *m_ShipAddress;
+@property ( nonatomic , retain , getter=getShipCity , setter=setShipCity :) NSString *m_ShipCity;
+@property ( nonatomic , retain , getter=getShipRegion , setter=setShipRegion :) NSString *m_ShipRegion;
 @property ( nonatomic , retain , getter=getShipPostalCode , setter=setShipPostalCode: ) NSString *m_ShipPostalCode;
-@property ( nonatomic , retain , getter=getShipCountry , setter=setShipCountry: ) NSString *m_ShipCountry;
+@property ( nonatomic , retain , getter=getShipCountry , setter=setShipCountry :) NSString *m_ShipCountry;
 @property ( nonatomic , retain , getter=getCustomerID , setter=setCustomerID: ) NSString *m_CustomerID;
-@property ( nonatomic , retain , getter=getCustomerName , setter=setCustomerName: ) NSString *m_CustomerName;
-@property ( nonatomic , retain , getter=getAddress , setter=setAddress: ) NSString *m_Address;
+@property ( nonatomic , retain , getter=getCustomerName , setter=setCustomerName :) NSString *m_CustomerName;
+@property ( nonatomic , retain , getter=getAddress , setter=setAddress :) NSString *m_Address;
 @property ( nonatomic , retain , getter=getCity , setter=setCity: ) NSString *m_City;
-@property ( nonatomic , retain , getter=getRegion , setter=setRegion: ) NSString *m_Region;
-@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode: ) NSString *m_PostalCode;
-@property ( nonatomic , retain , getter=getCountry , setter=setCountry: ) NSString *m_Country;
-@property ( nonatomic , retain , getter=getSalesperson , setter=setSalesperson: ) NSString *m_Salesperson;
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getRegion , setter=setRegion :) NSString *m_Region;
+@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode :) NSString *m_PostalCode;
+@property ( nonatomic , retain , getter=getCountry , setter=setCountry :) NSString *m_Country;
+@property ( nonatomic , retain , getter=getSalesperson , setter=setSalesperson :) NSString *m_Salesperson;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getOrderDate , setter=setOrderDate: )NSDate *m_OrderDate;
-@property ( nonatomic , retain , getter=getRequiredDate , setter=setRequiredDate: )NSDate *m_RequiredDate;
-@property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate: )NSDate *m_ShippedDate;
+@property ( nonatomic , retain , getter=getRequiredDate , setter=setRequiredDate :)NSDate *m_RequiredDate;
+@property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate :)NSDate *m_ShippedDate;
 @property ( nonatomic , retain , getter=getShipperName , setter=setShipperName: ) NSString *m_ShipperName;
-@property ( nonatomic , retain , getter=getProductID , setter=setProductID: )NSNumber *m_ProductID;
+@property ( nonatomic , retain , getter=getProductID , setter=setProductID :)NSNumber *m_ProductID;
 @property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
 @property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice: )NSDecimalNumber *m_UnitPrice;
-@property ( nonatomic , retain , getter=getQuantity , setter=setQuantity: )NSNumber *m_Quantity;
-@property ( nonatomic , retain , getter=getDiscount , setter=setDiscount: )NSDecimalNumber *m_Discount;
-@property ( nonatomic , retain , getter=getExtendedPrice , setter=setExtendedPrice: )NSDecimalNumber *m_ExtendedPrice;
-@property ( nonatomic , retain , getter=getFreight , setter=setFreight: )NSDecimalNumber *m_Freight;
+@property ( nonatomic , retain , getter=getQuantity , setter=setQuantity :)NSNumber *m_Quantity;
+@property ( nonatomic , retain , getter=getDiscount , setter=setDiscount :)NSDecimalNumber *m_Discount;
+@property ( nonatomic , retain , getter=getExtendedPrice , setter=setExtendedPrice :)NSDecimalNumber *m_ExtendedPrice;
+@property ( nonatomic , retain , getter=getFreight , setter=setFreight :)NSDecimalNumber *m_Freight;
 
 + (id) CreateInvoiceWithcustomername:(NSString *)aCustomerName salesperson:(NSString *)aSalesperson orderid:(NSNumber *)aOrderID shippername:(NSString *)aShipperName productid:(NSNumber *)aProductID productname:(NSString *)aProductName unitprice:(NSDecimalNumber *)aUnitPrice quantity:(NSNumber *)aQuantity discount:(NSDecimalNumber *)aDiscount;
 - (id) init;
@@ -1690,12 +1690,12 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
-@property ( nonatomic , retain , getter=getProductID , setter=setProductID: )NSNumber *m_ProductID;
-@property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
-@property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice: )NSDecimalNumber *m_UnitPrice;
-@property ( nonatomic , retain , getter=getQuantity , setter=setQuantity: )NSNumber *m_Quantity;
-@property ( nonatomic , retain , getter=getDiscount , setter=setDiscount: )NSDecimalNumber *m_Discount;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getProductID , setter=setProductID :)NSNumber *m_ProductID;
+@property ( nonatomic , retain , getter=getProductName , setter=setProductName :) NSString *m_ProductName;
+@property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice :)NSDecimalNumber *m_UnitPrice;
+@property ( nonatomic , retain , getter=getQuantity , setter=setQuantity :)NSNumber *m_Quantity;
+@property ( nonatomic , retain , getter=getDiscount , setter=setDiscount :)NSDecimalNumber *m_Discount;
 @property ( nonatomic , retain , getter=getExtendedPrice , setter=setExtendedPrice: )NSDecimalNumber *m_ExtendedPrice;
 
 + (id) CreateOrder_Details_ExtendedWithorderid:(NSNumber *)aOrderID productid:(NSNumber *)aProductID productname:(NSString *)aProductName unitprice:(NSDecimalNumber *)aUnitPrice quantity:(NSNumber *)aQuantity discount:(NSDecimalNumber *)aDiscount;
@@ -1727,7 +1727,7 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getSubtotal , setter=setSubtotal: )NSDecimalNumber *m_Subtotal;
 
 + (id) CreateOrder_SubtotalWithorderid:(NSNumber *)aOrderID;
@@ -1895,25 +1895,25 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getCustomerID , setter=setCustomerID: ) NSString *m_CustomerID;
-@property ( nonatomic , retain , getter=getEmployeeID , setter=setEmployeeID: )NSNumber *m_EmployeeID;
+@property ( nonatomic , retain , getter=getEmployeeID , setter=setEmployeeID :)NSNumber *m_EmployeeID;
 @property ( nonatomic , retain , getter=getOrderDate , setter=setOrderDate: )NSDate *m_OrderDate;
 @property ( nonatomic , retain , getter=getRequiredDate , setter=setRequiredDate: )NSDate *m_RequiredDate;
 @property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate: )NSDate *m_ShippedDate;
 @property ( nonatomic , retain , getter=getShipVia , setter=setShipVia: )NSNumber *m_ShipVia;
-@property ( nonatomic , retain , getter=getFreight , setter=setFreight: )NSDecimalNumber *m_Freight;
-@property ( nonatomic , retain , getter=getShipName , setter=setShipName: ) NSString *m_ShipName;
-@property ( nonatomic , retain , getter=getShipAddress , setter=setShipAddress: ) NSString *m_ShipAddress;
+@property ( nonatomic , retain , getter=getFreight , setter=setFreight :)NSDecimalNumber *m_Freight;
+@property ( nonatomic , retain , getter=getShipName , setter=setShipName :) NSString *m_ShipName;
+@property ( nonatomic , retain , getter=getShipAddress , setter=setShipAddress :) NSString *m_ShipAddress;
 @property ( nonatomic , retain , getter=getShipCity , setter=setShipCity: ) NSString *m_ShipCity;
-@property ( nonatomic , retain , getter=getShipRegion , setter=setShipRegion: ) NSString *m_ShipRegion;
-@property ( nonatomic , retain , getter=getShipPostalCode , setter=setShipPostalCode: ) NSString *m_ShipPostalCode;
-@property ( nonatomic , retain , getter=getShipCountry , setter=setShipCountry: ) NSString *m_ShipCountry;
-@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName: ) NSString *m_CompanyName;
+@property ( nonatomic , retain , getter=getShipRegion , setter=setShipRegion :) NSString *m_ShipRegion;
+@property ( nonatomic , retain , getter=getShipPostalCode , setter=setShipPostalCode :) NSString *m_ShipPostalCode;
+@property ( nonatomic , retain , getter=getShipCountry , setter=setShipCountry :) NSString *m_ShipCountry;
+@property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName :) NSString *m_CompanyName;
 @property ( nonatomic , retain , getter=getAddress , setter=setAddress: ) NSString *m_Address;
 @property ( nonatomic , retain , getter=getCity , setter=setCity: ) NSString *m_City;
-@property ( nonatomic , retain , getter=getRegion , setter=setRegion: ) NSString *m_Region;
-@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode: ) NSString *m_PostalCode;
+@property ( nonatomic , retain , getter=getRegion , setter=setRegion :) NSString *m_Region;
+@property ( nonatomic , retain , getter=getPostalCode , setter=setPostalCode :) NSString *m_PostalCode;
 @property ( nonatomic , retain , getter=getCountry , setter=setCountry: ) NSString *m_Country;
 
 + (id) CreateOrders_QryWithorderid:(NSNumber *)aOrderID companyname:(NSString *)aCompanyName;
@@ -1959,7 +1959,7 @@
 
 @property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName: ) NSString *m_CategoryName;
 @property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
-@property ( nonatomic , retain , getter=getProductSales , setter=setProductSales: )NSDecimalNumber *m_ProductSales;
+@property ( nonatomic , retain , getter=getProductSales , setter=setProductSales :)NSDecimalNumber *m_ProductSales;
 
 + (id) CreateProduct_Sales_for_1997Withcategoryname:(NSString *)aCategoryName productname:(NSString *)aProductName;
 - (id) init;
@@ -1992,7 +1992,7 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
+@property ( nonatomic , retain , getter=getProductName , setter=setProductName :) NSString *m_ProductName;
 @property ( nonatomic , retain , getter=getUnitPrice , setter=setUnitPrice: )NSDecimalNumber *m_UnitPrice;
 
 + (id) CreateProducts_Above_Average_PriceWithproductname:(NSString *)aProductName;
@@ -2055,7 +2055,7 @@
 @property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName: ) NSString *m_CategoryName;
 @property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
 @property ( nonatomic , retain , getter=getQuantityPerUnit , setter=setQuantityPerUnit: ) NSString *m_QuantityPerUnit;
-@property ( nonatomic , retain , getter=getUnitsInStock , setter=setUnitsInStock: )NSNumber *m_UnitsInStock;
+@property ( nonatomic , retain , getter=getUnitsInStock , setter=setUnitsInStock :)NSNumber *m_UnitsInStock;
 @property ( nonatomic , retain , getter=getDiscontinued , setter=setDiscontinued: )ODataBool *m_Discontinued;
 
 + (id) CreateProducts_by_CategoryWithcategoryname:(NSString *)aCategoryName productname:(NSString *)aProductName discontinued:(ODataBool *)aDiscontinued;
@@ -2108,8 +2108,8 @@
 }
 
 @property ( nonatomic , retain , getter=getCategoryID , setter=setCategoryID: )NSNumber *m_CategoryID;
-@property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName: ) NSString *m_CategoryName;
-@property ( nonatomic , retain , getter=getProductName , setter=setProductName: ) NSString *m_ProductName;
+@property ( nonatomic , retain , getter=getCategoryName , setter=setCategoryName :) NSString *m_CategoryName;
+@property ( nonatomic , retain , getter=getProductName , setter=setProductName :) NSString *m_ProductName;
 @property ( nonatomic , retain , getter=getProductSales , setter=setProductSales: )NSDecimalNumber *m_ProductSales;
 
 + (id) CreateSales_by_CategoryWithcategoryid:(NSNumber *)aCategoryID categoryname:(NSString *)aCategoryName productname:(NSString *)aProductName;
@@ -2157,8 +2157,8 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getSaleAmount , setter=setSaleAmount: )NSDecimalNumber *m_SaleAmount;
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getSaleAmount , setter=setSaleAmount :)NSDecimalNumber *m_SaleAmount;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getCompanyName , setter=setCompanyName: ) NSString *m_CompanyName;
 @property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate: )NSDate *m_ShippedDate;
 
@@ -2197,9 +2197,9 @@
 	
 }
 
-@property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate: )NSDate *m_ShippedDate;
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
-@property ( nonatomic , retain , getter=getSubtotal , setter=setSubtotal: )NSDecimalNumber *m_Subtotal;
+@property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate :)NSDate *m_ShippedDate;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getSubtotal , setter=setSubtotal :)NSDecimalNumber *m_Subtotal;
 
 + (id) CreateSummary_of_Sales_by_QuarterWithorderid:(NSNumber *)aOrderID;
 - (id) init;
@@ -2237,7 +2237,7 @@
 }
 
 @property ( nonatomic , retain , getter=getShippedDate , setter=setShippedDate: )NSDate *m_ShippedDate;
-@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID: )NSNumber *m_OrderID;
+@property ( nonatomic , retain , getter=getOrderID , setter=setOrderID :)NSNumber *m_OrderID;
 @property ( nonatomic , retain , getter=getSubtotal , setter=setSubtotal: )NSDecimalNumber *m_Subtotal;
 
 + (id) CreateSummary_of_Sales_by_YearWithorderid:(NSNumber *)aOrderID;
@@ -2282,31 +2282,31 @@
 
 @property ( nonatomic , retain , getter=getEtag , setter=setEtag: )NSString *m_OData_etag;
 @property ( nonatomic , retain , getter=getCategories , setter=setCategories: ) DataServiceQuery *m_Categories;
-@property ( nonatomic , retain , getter=getCustomerDemographics , setter=setCustomerDemographics: ) DataServiceQuery *m_CustomerDemographics;
-@property ( nonatomic , retain , getter=getCustomers , setter=setCustomers: ) DataServiceQuery *m_Customers;
+@property ( nonatomic , retain , getter=getCustomerDemographics , setter=setCustomerDemographics :) DataServiceQuery *m_CustomerDemographics;
+@property ( nonatomic , retain , getter=getCustomers , setter=setCustomers :) DataServiceQuery *m_Customers;
 @property ( nonatomic , retain , getter=getEmployees , setter=setEmployees: ) DataServiceQuery *m_Employees;
-@property ( nonatomic , retain , getter=getOrder_Details , setter=setOrder_Details: ) DataServiceQuery *m_Order_Details;
-@property ( nonatomic , retain , getter=getOrders , setter=setOrders: ) DataServiceQuery *m_Orders;
-@property ( nonatomic , retain , getter=getProducts , setter=setProducts: ) DataServiceQuery *m_Products;
-@property ( nonatomic , retain , getter=getRegions , setter=setRegions: ) DataServiceQuery *m_Regions;
-@property ( nonatomic , retain , getter=getShippers , setter=setShippers: ) DataServiceQuery *m_Shippers;
-@property ( nonatomic , retain , getter=getSuppliers , setter=setSuppliers: ) DataServiceQuery *m_Suppliers;
-@property ( nonatomic , retain , getter=getTerritories , setter=setTerritories: ) DataServiceQuery *m_Territories;
-@property ( nonatomic , retain , getter=getAlphabetical_list_of_products , setter=setAlphabetical_list_of_products: ) DataServiceQuery *m_Alphabetical_list_of_products;
-@property ( nonatomic , retain , getter=getCategory_Sales_for_1997 , setter=setCategory_Sales_for_1997: ) DataServiceQuery *m_Category_Sales_for_1997;
-@property ( nonatomic , retain , getter=getCurrent_Product_Lists , setter=setCurrent_Product_Lists: ) DataServiceQuery *m_Current_Product_Lists;
-@property ( nonatomic , retain , getter=getCustomer_and_Suppliers_by_Cities , setter=setCustomer_and_Suppliers_by_Cities: ) DataServiceQuery *m_Customer_and_Suppliers_by_Cities;
-@property ( nonatomic , retain , getter=getInvoices , setter=setInvoices: ) DataServiceQuery *m_Invoices;
-@property ( nonatomic , retain , getter=getOrder_Details_Extendeds , setter=setOrder_Details_Extendeds: ) DataServiceQuery *m_Order_Details_Extendeds;
-@property ( nonatomic , retain , getter=getOrder_Subtotals , setter=setOrder_Subtotals: ) DataServiceQuery *m_Order_Subtotals;
-@property ( nonatomic , retain , getter=getOrders_Qries , setter=setOrders_Qries: ) DataServiceQuery *m_Orders_Qries;
-@property ( nonatomic , retain , getter=getProduct_Sales_for_1997 , setter=setProduct_Sales_for_1997: ) DataServiceQuery *m_Product_Sales_for_1997;
-@property ( nonatomic , retain , getter=getProducts_Above_Average_Prices , setter=setProducts_Above_Average_Prices: ) DataServiceQuery *m_Products_Above_Average_Prices;
-@property ( nonatomic , retain , getter=getProducts_by_Categories , setter=setProducts_by_Categories: ) DataServiceQuery *m_Products_by_Categories;
+@property ( nonatomic , retain , getter=getOrder_Details , setter=setOrder_Details :) DataServiceQuery *m_Order_Details;
+@property ( nonatomic , retain , getter=getOrders , setter=setOrders :) DataServiceQuery *m_Orders;
+@property ( nonatomic , retain , getter=getProducts , setter=setProducts :) DataServiceQuery *m_Products;
+@property ( nonatomic , retain , getter=getRegions , setter=setRegions :) DataServiceQuery *m_Regions;
+@property ( nonatomic , retain , getter=getShippers , setter=setShippers :) DataServiceQuery *m_Shippers;
+@property ( nonatomic , retain , getter=getSuppliers , setter=setSuppliers :) DataServiceQuery *m_Suppliers;
+@property ( nonatomic , retain , getter=getTerritories , setter=setTerritories :) DataServiceQuery *m_Territories;
+@property ( nonatomic , retain , getter=getAlphabetical_list_of_products , setter=setAlphabetical_list_of_products :) DataServiceQuery *m_Alphabetical_list_of_products;
+@property ( nonatomic , retain , getter=getCategory_Sales_for_1997 , setter=setCategory_Sales_for_1997 :) DataServiceQuery *m_Category_Sales_for_1997;
+@property ( nonatomic , retain , getter=getCurrent_Product_Lists , setter=setCurrent_Product_Lists :) DataServiceQuery *m_Current_Product_Lists;
+@property ( nonatomic , retain , getter=getCustomer_and_Suppliers_by_Cities , setter=setCustomer_and_Suppliers_by_Cities :) DataServiceQuery *m_Customer_and_Suppliers_by_Cities;
+@property ( nonatomic , retain , getter=getInvoices , setter=setInvoices :) DataServiceQuery *m_Invoices;
+@property ( nonatomic , retain , getter=getOrder_Details_Extendeds , setter=setOrder_Details_Extendeds :) DataServiceQuery *m_Order_Details_Extendeds;
+@property ( nonatomic , retain , getter=getOrder_Subtotals , setter=setOrder_Subtotals :) DataServiceQuery *m_Order_Subtotals;
+@property ( nonatomic , retain , getter=getOrders_Qries , setter=setOrders_Qries :) DataServiceQuery *m_Orders_Qries;
+@property ( nonatomic , retain , getter=getProduct_Sales_for_1997 , setter=setProduct_Sales_for_1997 :) DataServiceQuery *m_Product_Sales_for_1997;
+@property ( nonatomic , retain , getter=getProducts_Above_Average_Prices , setter=setProducts_Above_Average_Prices :) DataServiceQuery *m_Products_Above_Average_Prices;
+@property ( nonatomic , retain , getter=getProducts_by_Categories , setter=setProducts_by_Categories :) DataServiceQuery *m_Products_by_Categories;
 @property ( nonatomic , retain , getter=getSales_by_Categories , setter=setSales_by_Categories: ) DataServiceQuery *m_Sales_by_Categories;
-@property ( nonatomic , retain , getter=getSales_Totals_by_Amounts , setter=setSales_Totals_by_Amounts: ) DataServiceQuery *m_Sales_Totals_by_Amounts;
+@property ( nonatomic , retain , getter=getSales_Totals_by_Amounts , setter=setSales_Totals_by_Amounts :) DataServiceQuery *m_Sales_Totals_by_Amounts;
 @property ( nonatomic , retain , getter=getSummary_of_Sales_by_Quarters , setter=setSummary_of_Sales_by_Quarters: ) DataServiceQuery *m_Summary_of_Sales_by_Quarters;
-@property ( nonatomic , retain , getter=getSummary_of_Sales_by_Years , setter=setSummary_of_Sales_by_Years: ) DataServiceQuery *m_Summary_of_Sales_by_Years;
+@property ( nonatomic , retain , getter=getSummary_of_Sales_by_Years , setter=setSummary_of_Sales_by_Years :) DataServiceQuery *m_Summary_of_Sales_by_Years;
 
 - (id) init;
 - (id) initWithUri:(NSString*)anUri credential:(id)acredential;

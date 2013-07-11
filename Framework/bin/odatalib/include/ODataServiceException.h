@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -25,10 +25,10 @@
     NSInteger		m_statusCode;
 }
 
-@property (nonatomic,	retain,	getter=getError,		setter=setError:			) NSString *m_error;
-@property (nonatomic,	retain,	getter=getDetailedError,setter=setDetailedError:	) NSString *m_detailedError;
-@property (nonatomic,	retain,	getter=getHeaders,		setter=setHeaders:			) NSDictionary *m_headers;
-@property (nonatomic,	assign,	getter=getStatusCode,	setter=setErrorCode:		) NSInteger m_statusCode;
+@property (nonatomic,	retain,	getter=getError,		setter=setError			) NSString *m_error;
+@property (nonatomic,	retain,	getter=getDetailedError,setter=setDetailedError	) NSString *m_detailedError;
+@property (nonatomic,	retain,	getter=getHeaders,		setter=setHeaders		) NSDictionary *m_headers;
+@property (nonatomic,	assign,	getter=getStatusCode,	setter=setErrorCode		) NSInteger m_statusCode;
 
 -(id) init;
 -(id) initWithError:(NSString *)anError contentType:(NSString *)aContentType headers:(NSDictionary *)aHeaders statusCode:(NSInteger)aSattusCode;

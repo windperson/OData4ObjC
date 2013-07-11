@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@
 }
 
 @property ( nonatomic , retain , getter=getHref, setter= setHref: ) NSString * m_href;
-@property ( nonatomic , retain , getter=getTitle, setter= setTitle: ) NSString * m_title;
+@property ( nonatomic , retain , getter=getTitle, setter= setTitle :) NSString * m_title;
 
 - (id) initWithHref:(NSString*)aHref title:(NSString*)aTitle;
 

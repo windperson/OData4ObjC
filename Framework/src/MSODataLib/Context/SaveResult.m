@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -83,7 +83,7 @@
 		
 		m_changedEntries = [[mergedDictionary sortObjects] retain];
 		[self setBatchBoundary:[NSString stringWithFormat:@"batch_%@",[ODataGUID GetNewGuid]]];
-		[self setChangesetBoundry:[NSString stringWithString:@""]];
+		[self setChangesetBoundry:@""];
 		self.m_completed = NO;
 		
 		self.m_processingMediaLinkEntry = NO;
@@ -139,7 +139,7 @@
 				NSString *changesetBody = [self createChangeSetBody:index replaceOnUpdateOption:aReplaceOnUpdateOption];
 				if (changesetBody != nil)
 				{
-					[Utility WriteLine:[NSString stringWithFormat:@"Content-Length: %d",strlen([changesetBody UTF8String])] inStream:changesetHeader];	
+					[Utility WriteLine:[NSString stringWithFormat:@"Content-Length: %zd",strlen([changesetBody UTF8String])] inStream:changesetHeader];
 				}
 								
 				[Utility WriteLine:changesetHeader inStream:m_batchRequestBody];
@@ -298,7 +298,7 @@
 {
 	NSString *uri =[m_context getBaseUriWithSlash];
 	uri = [uri stringByAppendingString:@"$batch"];
-	HttpBatchRequest *request = [[HttpBatchRequest alloc] initWithUri:uri batchBoundary:m_batchBoundary batchRequestBody:m_batchRequestBody credentials:nil batchHeaders:m_context.m_customHeaders credentialsInHeaders:NO context:m_context];
+	HttpBatchRequest *request = [[HttpBatchRequest alloc] initWithUri:uri batchBoundary:m_batchBoundary batchRequestBody:m_batchRequestBody credentials:nil batchHeaders:nil credentialsInHeaders:NO context:m_context];
 	HttpBatchResponse *response = [request GetResponse];
 	[self setHttpResponsesArray:[response getHttpResponses]];
 	[self storeBatchResponse];
@@ -1297,7 +1297,7 @@
 			NSString *tmpObj = [aResourceBox getEntityTag];
 			if(tmpObj == nil || [tmpObj isEqualToString:@""])
 			{
-				tmpObj = [NSString stringWithString:@"*"];
+				tmpObj = @"*";
 			}
 		}
 		

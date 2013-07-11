@@ -16,7 +16,6 @@
 		61280D2713E18DE100094A70 /* xmlFile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 61280D2613E18DE100094A70 /* xmlFile.xml */; };
 		6166D79013E2BA99008B3F2C /* addEmp1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6166D78F13E2BA99008B3F2C /* addEmp1.xml */; };
 		6166D79E13E2BAFB008B3F2C /* emp2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6166D79D13E2BAFB008B3F2C /* emp2.xml */; };
-		61A13E7513E2AA0A004C5C1C /* NorthwindEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A13E7313E2AA0A004C5C1C /* NorthwindEntities.m */; };
 		61A13EBC13E2B064004C5C1C /* retriveEmp.xml in Resources */ = {isa = PBXBuildFile; fileRef = 61A13EBB13E2B064004C5C1C /* retriveEmp.xml */; };
 		61A13EDE13E2B621004C5C1C /* emp1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 61A13EDD13E2B621004C5C1C /* emp1.xml */; };
 		61A13EE513E2B82C004C5C1C /* img1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 61A13EE413E2B82C004C5C1C /* img1.bmp */; };
@@ -28,6 +27,8 @@
 		637FE2F9117C326100F3947C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FE2F8117C326100F3947C /* RootViewController.m */; };
 		637FE47B117C3FB300F3947C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FE47A117C3FB300F3947C /* DetailsViewController.m */; };
 		7CECE964132B0CFC00D16E11 /* libMSODataLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CECE963132B0CD600D16E11 /* libMSODataLib.a */; };
+		D1E9DA42178EF9FA009CB0B8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E9DA41178EF9FA009CB0B8 /* Default-568h@2x.png */; };
+		D1E9DA45178EFAB0009CB0B8 /* NorthwindEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E9DA44178EFAB0009CB0B8 /* NorthwindEntities.m */; };
 		ED995FA013AB84D1002C9897 /* NetflixCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = ED995F9F13AB84D1002C9897 /* NetflixCatalog.m */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +62,6 @@
 		61280D2613E18DE100094A70 /* xmlFile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xmlFile.xml; sourceTree = "<group>"; };
 		6166D78F13E2BA99008B3F2C /* addEmp1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = addEmp1.xml; sourceTree = "<group>"; };
 		6166D79D13E2BAFB008B3F2C /* emp2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = emp2.xml; sourceTree = "<group>"; };
-		61A13E7313E2AA0A004C5C1C /* NorthwindEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NorthwindEntities.m; path = ../../tweet_Sample/Classes/NorthwindEntities.m; sourceTree = SOURCE_ROOT; };
-		61A13E7413E2AA0A004C5C1C /* NorthwindEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NorthwindEntities.h; path = ../../tweet_Sample/Classes/NorthwindEntities.h; sourceTree = SOURCE_ROOT; };
 		61A13EBB13E2B064004C5C1C /* retriveEmp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = retriveEmp.xml; sourceTree = "<group>"; };
 		61A13EDD13E2B621004C5C1C /* emp1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = emp1.xml; sourceTree = "<group>"; };
 		61A13EE413E2B82C004C5C1C /* img1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = img1.bmp; sourceTree = "<group>"; };
@@ -78,6 +77,9 @@
 		637FE47A117C3FB300F3947C /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		7CECE959132B0CD600D16E11 /* MSODataLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSODataLib.xcodeproj; path = ../../../framework/src/MSODataLib/MSODataLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* ODataSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ODataSampleApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D1E9DA41178EF9FA009CB0B8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D1E9DA43178EFAB0009CB0B8 /* NorthwindEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NorthwindEntities.h; sourceTree = "<group>"; };
+		D1E9DA44178EFAB0009CB0B8 /* NorthwindEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NorthwindEntities.m; sourceTree = "<group>"; };
 		ED995F9E13AB84D1002C9897 /* NetflixCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetflixCatalog.h; sourceTree = "<group>"; };
 		ED995F9F13AB84D1002C9897 /* NetflixCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetflixCatalog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,10 +102,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D1E9DA43178EFAB0009CB0B8 /* NorthwindEntities.h */,
+				D1E9DA44178EFAB0009CB0B8 /* NorthwindEntities.m */,
 				61E7E8BC13E7D8560023DC29 /* DemoService.m */,
 				61E7E8BD13E7D8560023DC29 /* DemoService.h */,
-				61A13E7313E2AA0A004C5C1C /* NorthwindEntities.m */,
-				61A13E7413E2AA0A004C5C1C /* NorthwindEntities.h */,
 				ED995F9E13AB84D1002C9897 /* NetflixCatalog.h */,
 				ED995F9F13AB84D1002C9897 /* NetflixCatalog.m */,
 				1D3623240D0F684500981E51 /* ODataSampleAppAppDelegate.h */,
@@ -127,6 +129,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D1E9DA41178EF9FA009CB0B8 /* Default-568h@2x.png */,
 				7CECE959132B0CD600D16E11 /* MSODataLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -260,6 +263,7 @@
 				61A13EEE13E2B89A004C5C1C /* addEmp.xml in Resources */,
 				6166D79013E2BA99008B3F2C /* addEmp1.xml in Resources */,
 				6166D79E13E2BAFB008B3F2C /* emp2.xml in Resources */,
+				D1E9DA42178EF9FA009CB0B8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +279,8 @@
 				637FE2F9117C326100F3947C /* RootViewController.m in Sources */,
 				637FE47B117C3FB300F3947C /* DetailsViewController.m in Sources */,
 				ED995FA013AB84D1002C9897 /* NetflixCatalog.m in Sources */,
-				61A13E7513E2AA0A004C5C1C /* NorthwindEntities.m in Sources */,
 				61E7E8BE13E7D8560023DC29 /* DemoService.m in Sources */,
+				D1E9DA45178EFAB0009CB0B8 /* NorthwindEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +323,7 @@
 				GCC_PREFIX_HEADER = ODataSampleApp_Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../framework/bin/odatalib/include\"/**";
 				INFOPLIST_FILE = "ODataSampleApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../framework/bin/odatalib/lib/iPhoneSimulatorLibs/iPhone_Simulator_4.0/Debug\"",
@@ -344,7 +348,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../framework/src/MSODataLib//**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../framework/src/MSODataLib/**";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../framework/src/MSODataLib/build/Debug-iphonesimulator";
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

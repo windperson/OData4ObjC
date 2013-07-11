@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -38,11 +38,11 @@
 		if(aHref)
 			[self setHref:aHref];
 		else
-			[self setHref:[NSString stringWithString:@""]];
+			[self setHref:@""];
 		if(aTitle)
 			[self setTitle:aTitle];
 		else
-			[self setTitle:[NSString stringWithString:@""]];
+			[self setTitle:@""];
 	}
 	return self;
 }
@@ -68,7 +68,7 @@
 		if(aTitle)
 			[self setTitle:aTitle];
 		else
-			[self setTitle:[NSString stringWithString:@""]];
+			[self setTitle:@""];
 		
 		if(theCollections)
 			[self setCollections:theCollections];
@@ -111,7 +111,7 @@
 		if(anUrl)
 			[self setBaseUrl:anUrl];
 		else
-			[self setBaseUrl:[NSString stringWithString:@""]];
+			[self setBaseUrl:@""];
 		
 		if(theWorkspaces)
 			[self setWorkspaces:theWorkspaces];

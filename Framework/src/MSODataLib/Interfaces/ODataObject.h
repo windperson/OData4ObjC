@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -41,8 +41,8 @@
 @property ( nonatomic, retain, getter=getEntityKey,		   setter=setEntityKey:		  )NSMutableDictionary *m_OData_entityKey;
 @property ( nonatomic, retain, getter=getRelLinks,		   setter=setRelLinks:		  )NSMutableArray *m_OData_relLinks;
 @property ( nonatomic, retain, getter=getBaseURI,		   setter=setBaseURI:		  )NSString *m_OData_baseURI;
-@property ( nonatomic, retain, getter=getEntityFKRelation, setter=setEntityFKRelation: )NSMutableDictionary *m_OData_entityFKRelation;
-@property ( nonatomic, retain, getter=getEtag,			   setter=setEtag:             )NSString *m_OData_etag;
+@property ( nonatomic, retain, getter=getEntityFKRelation, setter=setEntityFKRelation :)NSMutableDictionary *m_OData_entityFKRelation;
+@property ( nonatomic, retain, getter=getEtag,			   setter=setEtag :            )NSString *m_OData_etag;
 - (id) init;
 - (id) initWithUri:(NSString*)anUri;
 - (id) getActualEntityTypeName:(id)aKey;

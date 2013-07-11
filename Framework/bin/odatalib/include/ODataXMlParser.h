@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -44,10 +44,10 @@
 	NSMutableArray   *xmlElements;
 }
 
-@property(nonatomic,assign,getter=getParentElement,setter=setParentElement:) ODataXMLElements *parentElement;
-@property(nonatomic,retain,getter=getRootElement,setter=setRootElement:) ODataXMLElements *rootElement;
-@property(nonatomic,assign,getter=getTempParentElement,setter=setTempParentElement:) ODataXMLElements *tempparentElement;
-@property(nonatomic,retain,getter=getXmlElements,setter=setXmlElements:) NSMutableArray   *xmlElements;
+@property(nonatomic,assign,getter=getParentElement,setter=setParentElement) ODataXMLElements *parentElement;
+@property(nonatomic,retain,getter=getRootElement,setter=setRootElement) ODataXMLElements *rootElement;
+@property(nonatomic,assign,getter=getTempParentElement,setter=setTempParentElement) ODataXMLElements *tempparentElement;
+@property(nonatomic,retain,getter=getXmlElements,setter=setXmlElements) NSMutableArray   *xmlElements;
 
 -(id)init;
 -(ODataXMLElements *)parseData:(NSData *)xmlDocument;

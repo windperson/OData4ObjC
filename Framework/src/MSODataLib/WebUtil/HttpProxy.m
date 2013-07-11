@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@
  * @return string  m_port The Proxy Server m_port Number    
  */
 - (id) initWithAddress:(NSString*) anAddress port:(NSString*) aPort {
-	if((self = [super init]))
+	if(self = [super init])
 	{
 		[self setProxyAddres:[NSString stringWithString:anAddress]];
 		[self setProxyPort:[NSString stringWithString:aPort]];

@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -52,12 +52,12 @@
      *
      * @var <string>
      */
-    BOOL m_usePathStyleUri;// = false;
+    BOOL m_usePathStyleUri;
 }
 
-@property(nonatomic,retain, getter=getAccountName,		setter=setAccountName:		)NSString *m_accountName;
-@property(nonatomic,retain, getter=getAccountKey,		setter=setAccountKey:		)NSString *m_accountKey;
-@property(nonatomic,assign, getter=getUsePathStyleUri,	setter=setUsePathStyleUri:	)BOOL m_usePathStyleUri;
+@property(nonatomic,retain, getter=getAccountName,		setter=setAccountName		)NSString *m_accountName;
+@property(nonatomic,retain, getter=getAccountKey,		setter=setAccountKey		)NSString *m_accountKey;
+@property(nonatomic,assign, getter=getUsePathStyleUri,	setter=setUsePathStyleUri	)BOOL m_usePathStyleUri;
 
 - (id) initWithAccountName:(NSString *)anAccountName accountKey:(NSString *)anAccountKey usePathStyleUri:(BOOL )anUsePathStyleUri;
 - (NSString *) prepareQueryStringForSigning:(NSString *)aValue;

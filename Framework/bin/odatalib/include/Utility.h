@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -28,7 +28,6 @@
 + (NSString*) getPropertyName:(NSString*) aRawProperty;
 + (NSInteger) reverseFind:(NSString*) aSourceString findString:(NSString*)aFindString;
 + (NSString*) getEntitySetFromUrl:(NSString*) anUri;
-//+ (NSDictionary*) getAttributes($typeInstance);
 + (void) WriteLine:(NSString*)aLine inStream:(NSMutableString*) aStream;
 + (NSString*) getUri:(ODataObject*)anObject;
 + (BOOL) HttpSuccessCode:(NSNumber*)aHttpCode;
@@ -36,7 +35,6 @@
 + (NSString*) TimeInISO8601;
 + (BOOL) IsAbsoluteUrl:(NSString*)anUrl;
 + (NSMutableDictionary*)CreateHeaders:(NSString*)aMethodType eTag:(NSString*)aETag ODataServiceVersion:(NSString *)dataserviceversion;
-+ (NSString*) getEntitySetFromUrl:(NSString*) anUri;
 
 + (NSString *) URLEncode:(NSString *) aString;
 + (NSString *) URLDecode:(NSString *) aString;
@@ -45,5 +43,6 @@
 + (NSData*) Base64Decode:(NSString*) anInputString;
 
 + (NSString*) getEntityNameFromUrl:(NSString*) anUri;
-
++ (NSData *) dataWithBase64EncodedString:(NSString *) string;
++ (NSString *) base64Encoding:(NSData *) data;
 @end

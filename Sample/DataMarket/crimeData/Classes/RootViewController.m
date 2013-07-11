@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -76,9 +76,9 @@
 			
 				NSLog(@"=== Crime Information  ===");
 				NSLog(@" City...%@",[p1 getCity]);
-				NSLog(@" Year...%d",[p1 getYear]);
-				NSLog(@" Population...%d",[p1 getPopulation]);
-				NSLog(@" robbery...%d",[p1 getRobbery]);
+				NSLog(@" Year...%@",[p1 getYear]);
+				NSLog(@" Population...%@",[p1 getPopulation]);
+				NSLog(@" robbery...%@",[p1 getRobbery]);
 				NSLog(@" MotorVehicleTheft...%@",[p1 getMotorVehicleTheft]);
 	
 			}
@@ -95,21 +95,16 @@
 {
 	@try {
 		WindowsCredential *credt = [[WindowsCredential alloc] initWithUserName:@"livefx" password:@"FEQynzVxM41sj4GVkciFkFsOi/Vh7WxeY0P/JCGQ4K8="];
-		
 		datagovCrimesContainer *govCrime = [[datagovCrimesContainer alloc] initWithUri:@"https://api.datamarket.azure.com/Data.ashx/data.gov/Crimes/"credential:credt];
 		DataServiceQuery *query =[govCrime citycrime];
 		[query top:1];
 		//[query addQueryOption:@"format" query:@"json"];
 		QueryOperationResponse *response = [query execute];
 		data_gov_Crimes_CityCrime *crimedata=[[response getResult] objectAtIndex:0];
-		
 		//update property
 		[crimedata setState:@"MAHARASTRA"];
-		
 		[govCrime updateObject:crimedata];
-		
 		[govCrime saveChanges];
-		
 		[crimedata release];
 	}
 	@catch (NSException * e) {

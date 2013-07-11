@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -23,11 +23,11 @@
     BOOL					m_hasEPM;
 }
 
-@property ( nonatomic , retain , getter=getAttributes ,				setter=setAttributes:			) NSMutableDictionary *m_attributes;
-@property ( nonatomic , retain , getter=getProperties ,				setter=setProperties:			) NSMutableDictionary *m_properties;
-@property ( nonatomic , retain , getter=getNavigationProperties ,	setter=setNavigationProperties:	) NSMutableDictionary *m_navigationProperties;
-@property ( nonatomic , retain , getter=getRawSortedEPMProperties,	setter=setSortedEPMProperties:	) NSMutableDictionary *m_sortedEPMProperties;
-@property ( nonatomic , assign , getter=hasEPM ,					setter=setHasEPM:				) BOOL m_hasEPM;
+@property ( nonatomic , retain , getter=getAttributes ,				setter=setAttributes			) NSMutableDictionary *m_attributes;
+@property ( nonatomic , retain , getter=getProperties ,				setter=setProperties			) NSMutableDictionary *m_properties;
+@property ( nonatomic , retain , getter=getNavigationProperties ,	setter=setNavigationProperties	) NSMutableDictionary *m_navigationProperties;
+@property ( nonatomic , retain , getter=getRawSortedEPMProperties,	setter=setSortedEPMProperties	) NSMutableDictionary *m_sortedEPMProperties;
+@property ( nonatomic , assign , getter=hasEPM ,					setter=setHasEPM				) BOOL m_hasEPM;
 
 - (id) initWithType:(NSString*)aType;
 

@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@
 
 @property ( nonatomic , retain , getter=getHttpBody    , setter=setHttpBody:     ) NSData *m_HttpBody;
 @property ( nonatomic , retain , getter=getHttpHeaders , setter=setHttpHeaders:	) NSMutableDictionary *m_HttpHeaders;
-@property ( nonatomic , getter=getHttpCode             , setter=setHttpCode:		) NSInteger m_HttpCode;
+@property ( nonatomic , getter=getHttpCode             , setter=setHttpCode		:) NSInteger m_HttpCode;
 @property ( nonatomic , retain , getter=getHttpMessage , setter=setHttpMessage:	) NSString *m_HttpMessage;
 @property ( nonatomic , retain , getter=getHttpError   , setter=setHttpError:	) NSError *m_Httperror;
 

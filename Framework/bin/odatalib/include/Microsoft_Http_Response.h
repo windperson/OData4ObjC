@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -27,11 +27,11 @@
     NSString *m_body;
 }
 
-@property (nonatomic, retain,getter=getVersion,setter=setVersion:)NSString *m_version;
-@property (nonatomic, retain,getter=getMessage,setter=setMessage:)NSString *m_message;
-@property (nonatomic, retain,getter=getHeaders,setter=setHeaders:)NSMutableDictionary *m_headers;
-@property (nonatomic, retain,getter=getBody,setter=setBody:) NSString *m_body;
-@property (nonatomic, assign,getter=getCode,setter=setCode:) NSInteger m_code;
+@property (nonatomic, retain,getter=getVersion,setter=setVersion)NSString *m_version;
+@property (nonatomic, retain,getter=getMessage,setter=setMessage)NSString *m_message;
+@property (nonatomic, retain,getter=getHeaders,setter=setHeaders)NSMutableDictionary *m_headers;
+@property (nonatomic, retain,getter=getBody,setter=setBody) NSString *m_body;
+@property (nonatomic, assign,getter=getCode,setter=setCode) NSInteger m_code;
 
 
 -(id)initWithCode:(NSInteger)code responseheaders:(NSMutableDictionary *)headers responseBody:(NSString *)body responseVersion:(NSString *)version responseMessage:(NSString *)mesage;

@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@
 	NSMutableDictionary *m_workspaces;
 }
 
-@property ( nonatomic , retain , getter=getBaseUrl , setter= setBaseUrlw: ) NSString *m_baseUrl;
+@property ( nonatomic , retain , getter=getBaseUrl , setter= setBaseUrl: ) NSString *m_baseUrl;
 @property ( nonatomic , retain , getter=getWorkspaces , setter=setWorkspaces: ) NSMutableDictionary *m_workspaces;
 
 - (id) initWithUrl:(NSString*)anUrl workspaces:(NSMutableDictionary*)theWorkspaces;

@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -164,7 +164,8 @@
 	NorthwindModel_Employee *emp=[resultArray objectAtIndex:0];
 	NSLog(@"last name = %@",[emp getLastName]);
 	NSLog(@"birth date = %@",[emp getBirthDate]);
-	NSData *photodata=[emp getPhoto];
+    
+	NSData *photodata= [emp getPhoto];
 	UIImage *image=[UIImage imageWithData:photodata];
 	UIImageView *imgView = [[UIImageView alloc]initWithImage:image];
 	[self.view addSubview:imgView];
@@ -660,13 +661,18 @@
 	
 	@try 
 	{
+        /*
+         * Elizabeth Duncan 2013
+         * All of these functions work correctly, uncomment whichever you want to run
+         * However, many reference the Netflix OData endpoint, which is no longer functional
+         */
 		//[self loadProperty];
 		//[self AddPersonObject];
 		//[self retrieveTitles];
 		//[self addEmployee];
-		[self retrieveEmployee];
+		//[self retrieveEmployee];
 		//[self test];
-		//[self test2];
+		[self test2];
 		//[self testForNorthwindEntities];
 		//[self testDate];
 		

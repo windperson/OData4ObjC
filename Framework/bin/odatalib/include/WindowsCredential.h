@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@
     NSString *m_password;
 }
 
-@property (nonatomic, retain , getter=getUserName, setter=setUserName: )NSString *m_userName;
-@property (nonatomic, retain , getter=getPassword, setter=setPassword: )NSString *m_password;
+@property (nonatomic, retain , getter=getUserName, setter=setUserName )NSString *m_userName;
+@property (nonatomic, retain , getter=getPassword, setter=setPassword )NSString *m_password;
 
 - (id) initWithUserName:(NSString *)anUserName password:(NSString *)aPassword;
 - (void) setProxy:(HttpProxy*)aProxy;

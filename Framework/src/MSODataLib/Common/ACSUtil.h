@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -34,10 +34,10 @@
 @property ( nonatomic , retain , getter=getServiceNamespace ,	setter=setServiceNamespace:	) NSString *m_serviceNamespace;
 @property ( nonatomic , retain , getter=getWrapName ,			setter=setWrapName:			) NSString *m_wrapName;
 @property ( nonatomic , retain , getter=getWrapPassword ,		setter=setWrapPassword:		) NSString *m_wrapPassword;
-@property ( nonatomic , retain , getter=getWrapScope ,			setter=setWrapScope:		) NSString *m_wrapScope;
+@property ( nonatomic , retain , getter=getWrapScope ,			setter=setWrapScope:			) NSString *m_wrapScope;
 @property ( nonatomic , retain , getter=getClaims ,				setter=setClaims:			) NSMutableDictionary *m_claims;
-@property ( nonatomic , retain , getter=getProxy ,				setter=setProxy:			) HttpProxy *m_proxy;
-@property ( nonatomic , retain , getter=getToken ,				setter=setToken:			) NSString *m_token;
+@property ( nonatomic , retain , getter=getProxy ,				setter=setProxy:				) HttpProxy *m_proxy;
+@property ( nonatomic , retain , getter=getToken ,				setter=setToken	:			) NSString *m_token;
 
 /**
  * Constructor. It will initialize the member variables.

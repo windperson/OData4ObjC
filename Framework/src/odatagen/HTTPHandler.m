@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -94,7 +94,7 @@
 		{
 			key = [keys objectAtIndex: i];
 			value = [dict objectForKey: key];
-
+			//NSLog(@"%@ == %@ ",key,value);
 			[http_response_headers setValue:value forKey:key];
 		}
 		
@@ -106,7 +106,7 @@
  */
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {	
-
+	//NSLog(@"odatagen data =  %@ ",[[[NSString alloc] initWithData:http_response encoding:NSUTF8StringEncoding] autorelease]);
 	done = YES;
 }
 /*

@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -54,7 +54,7 @@
  */
 - (id) initWithServiceName:(NSString*) aServiceName wrapName:(NSString*)aWrapName wrapPassword:(NSString*)aWrapPassword wrapScope:(NSString*)aWrapScope claims:(NSMutableDictionary*)aClaims;
 {
-	if((self=[super init]))
+	if(self=[super init])
 	{
 		if(aServiceName)
 			serviceNamespace=aServiceName;			
@@ -122,7 +122,7 @@
 							
 		NSEnumerator *enumerator = [claims keyEnumerator];
 		NSString* key;
-		while((key = [ enumerator nextObject]) )
+		while(key = [ enumerator nextObject] )
 		{
 			NSString *value = [claims objectForKey:key];
 			if(value)

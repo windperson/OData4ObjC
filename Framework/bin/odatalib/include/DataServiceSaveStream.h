@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@
 }
 
 @property ( nonatomic , retain , getter=getStream , setter=setStream: ) ContentStream *m_stream;
-@property ( nonatomic , retain , getter=getArgs	,	setter=setArgs:	  ) DataServiceRequestArgs *m_args; 
+@property ( nonatomic , retain , getter=getArgs	,	setter=setArgs:	 ) DataServiceRequestArgs *m_args; 
 
 - (id) initWithStream:(ContentStream*)aStream dataServiceRequestArgs:(DataServiceRequestArgs*)aDataServiceRequestArgs;
 

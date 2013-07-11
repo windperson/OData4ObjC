@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -56,10 +56,10 @@
 	{
 		
 		if(anURL)		[self setUri:[NSString stringWithString:anURL]];
-		else			[self setUri:[NSString stringWithString:@""]];
+		else			[self setUri:@""];
 		
 		if(aHttpMethod) [self setMethod:[NSString stringWithString:aHttpMethod]];
-		else			[self setMethod:[NSString stringWithString:@""]];
+		else			[self setMethod:@""];
 		
 		if(aCredential) [self setCredential:aCredential];
 		else			[self setCredential:nil];

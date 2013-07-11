@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
 	AzureTableUtil *m_azureTableUtil;
 }
 
-@property(nonatomic,retain,getter=getAzureTableUtil,setter=setAzureTableUtil:)AzureTableUtil *m_azureTableUtil;
+@property(nonatomic,retain,getter=getAzureTableUtil,setter=setAzureTableUtil)AzureTableUtil *m_azureTableUtil;
 
 - (id) initWithAccountName:(NSString *)anAccountName accountKey:(NSString *)anAccountKey userPathStyleUrl:(BOOL)anUserPathStyleUrl;
 - (void) setProxy:(HttpProxy*) aProxy;

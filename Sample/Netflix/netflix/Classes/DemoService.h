@@ -1,6 +1,6 @@
 /**
 *
-*Copyright 2010 OuterCurve Foundation
+*Copyright 2010 Microsoft Corp
 *
 *Licensed under the Apache License, Version 2.0 (the "License");
 *you may not use this file except in compliance with the License.
@@ -36,8 +36,6 @@
 #import "ODataBool.h"
 #import  "mProperties.h"
 
-
-@class ODataDemo_Address;
 
 /**
  * @interface:Address

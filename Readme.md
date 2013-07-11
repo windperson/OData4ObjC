@@ -1,7 +1,34 @@
-OData4ObjC edited by E A Duncan
+OData4ObjC
 ==================
+OData4ObjC is an open-source toolkit to access and manipulate OData in Objective C.
+This SDK supports up to iOS 6.
 
-This SDK is IN PROGRESS to support up to iOS 6.
+
+SetUp Instructions
+==================
+* Dowload latest zip edition
+* Unzip folder and move to suitable location (ex: Documents folder, renamed folder to ODataSDK)
+
+Set-up XCode:
+* Open XCode project
+* Add framework "libMSODataLib.a" (ex: found at ODataSKD/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_6.1/release )
+* Add Search Paths
+	- Select Project
+	- Select project under TARGETS
+	- Go to Build Settings -> Search Paths
+	- Add include folder to "Header Search Paths" and choose recursive
+	  (ex: "$(SRCROOT)/../../../../Documents/ODataSDK/Framework/bin/odatalib/include")
+	- Add appropriate iPhoneSimulatorLibrary and choose non-recursive
+	  (ex "$(SRCROOT)/../../../../Documents/ODataSDK/Framework/bin/odatalib/lib/iPhoneSimulatorLibs/iPhone_Simulator_6.1/release")
+* In Build Settings -> Linking
+  - Set "Mach-O Type" to "Executable"
+
+Build OData Proxy:
+* Validate OData endpoint is up and running. Copy the url
+* In the command line, navigate to MacOSX10.8.sdk/Release (ex: ODataSDK/Framework/bin/ODatagenBinary/MacOSX10.8.sdk/Release)
+* Execute "./odatagen /uri=http://MYURL/example.svc/ /out=."
+* Move generated .h and .m files to XCode folder
+* Add .h and .m files to XCode (right-click project file and select "Add Files")
 
 
 Usage Instructions
@@ -9,7 +36,8 @@ Usage Instructions
 
 The SDK will run on Mac OSX machines only.
 
-Documentation on how to use the OData toolkit (the original version that only supported up to iOS 4) for Objective-C can be found in the [project web site](http://odata.github.com/OData4ObjC/).
+Further documentation on how to use the OData toolkit (the original version that only supported up to iOS 4) for Objective-C can be found in the [project web site](http://odata.github.com/OData4ObjC/).
+
 
 Getting Help
 ============
@@ -18,7 +46,7 @@ Do you need help using the project, or do you want to request a feature or bug f
 
 * To get some help: use the [Discussions tool on our CodePlex project page](http://odataobjc.codeplex.com/discussions).
 
-I monitor this forum.
+( I monitor this forum. )
 
 
 Contributing

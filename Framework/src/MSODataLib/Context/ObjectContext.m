@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -46,7 +46,6 @@
 @synthesize m_Credential;
 @synthesize m_entities;
 @synthesize m_timeOutInterval;
-@synthesize m_entityFKRelation;
 
 + (void)initialize
 {
@@ -470,11 +469,14 @@
  * @Return No return value
  */
 - (void) saveChanges
-{   
+{
 	SaveResult *result = [[SaveResult alloc] initWithObjectContext:self saveChangesOptions:m_saveChangesOptions];
-	
 	@try 
 	{
+        NSLog(@"Batch: %d", Batch);
+        NSLog(@"m_saveChangesOptions: %d", self.m_saveChangesOptions);
+        NSLog(@"m_saveChangesOptions: %d", self.m_replaceOnUpdateOption);
+        
 		if(self.m_saveChangesOptions == Batch)
 		{
 			[result batchRequest:self.m_replaceOnUpdateOption];
@@ -611,12 +613,7 @@
 	else
 		httpdata = [[NSData alloc] initWithData:[body dataUsingEncoding:NSUTF8StringEncoding]];
 	
-	HTTPHandler * httpHandler = nil;
-    if ([m_customHeaders count] != 0) 
-        httpHandler =  [self executeHTTPRequest:aUri httpmethod:method httpbodydata:httpdata etag:etag customHeaders:m_customHeaders];
-    else
-        httpHandler =  [self executeHTTPRequest:aUri httpmethod:method httpbodydata:httpdata etag:etag customHeaders:nil];
-    
+	HTTPHandler * httpHandler =  [self executeHTTPRequest:aUri httpmethod:method httpbodydata:httpdata etag:etag customHeaders:nil];
 	[httpdata release];
 	return httpHandler;	
 }
@@ -1345,7 +1342,7 @@
 	NSString * relationship = [[m_association objectForKey:aRelationship] objectForKey:aFromOrToRole];
 	if(relationship == nil)
 	{
-		NSException *anException = [NSException exceptionWithName:@"Exception" reason:[NSString stringWithString:@"Invalid Operation : Invalid RelationShip ($relationship) or FromToRole ($fromOrToRole)"] userInfo:nil];
+		NSException *anException = [NSException exceptionWithName:@"Exception" reason:@"Invalid Operation : Invalid RelationShip ($relationship) or FromToRole ($fromOrToRole)" userInfo:nil];
 		[anException raise];
 	}
 	
@@ -1496,16 +1493,16 @@
 	
 	if(allowAnyType == YES)
 	{
-		NSString *str = [NSString stringWithString:@"*/*"];
+		NSString *str = @"*/*";
 		[headers setObject:str forKey:HttpRequestHeader_Accept];
 	}
 	else
 	{
-		NSString *str = [NSString stringWithString:@"application/atom+xml,application/xml"];
+		NSString *str = @"application/atom+xml,application/xml";
 		[headers setObject:str forKey:HttpRequestHeader_Accept];
 	}
 	
-	[headers setObject:[NSString stringWithString:@"UTF-8"] forKey:HttpRequestHeader_AcceptCharset];
+	[headers setObject:@"UTF-8" forKey:HttpRequestHeader_AcceptCharset];
 	[headers setObject:[NSString stringWithString:am_dataServiceVersion] forKey:@"m_dataServiceVersion"];
 	[headers setObject:[NSString stringWithString:Resource_DataServiceVersion_2] forKey:@"Maxm_dataServiceVersion"];
 	
@@ -1559,7 +1556,7 @@
 
 -(void) setEntitiesWithArray:(NSArray *)anArray
 {
-	[self setEntities:[[[NSMutableArray alloc]initWithArray:anArray] autorelease] ];
+	[self setEntities:[[[NSArray alloc]initWithArray:anArray] autorelease] ];
 }
 
 

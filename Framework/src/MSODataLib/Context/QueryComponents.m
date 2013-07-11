@@ -1,5 +1,5 @@
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -37,8 +37,8 @@
 	
 	if(self = [super init])
 	{
-		[self setUri:[NSString stringWithString:@""]];
-		[self setVersion:[NSString stringWithString:@""]];
+		[self setUri:@""];
+		[self setVersion:@""];
 	}
 	return self;
 }
@@ -49,10 +49,10 @@
 	if(self = [super init])
 	{
 		if(aUri)		[self setUri:[NSString stringWithString:aUri]];
-		else			[self setUri:[NSString stringWithString:@""]];
+		else			[self setUri:@""];
 	
 		if(aVersion)	[self setVersion:[NSString stringWithString:aVersion]];
-		else		 	[self setVersion:[NSString stringWithString:@""]];
+		else		 	[self setVersion:@""];
 	}
 	
 	return self;

@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 OuterCurve Foundation
+ Copyright 2010 Microsoft Corp
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -63,8 +63,8 @@
 
 @property (nonatomic, retain) NSMutableData *http_response;
 @property (nonatomic, retain) NSError * http_error;
-@property (nonatomic, retain,getter=getUsername,setter=setUsername:) NSString *user_name;
-@property (nonatomic, retain,getter=getPassword,setter=setPassword:) NSString *password;
+@property (nonatomic, retain,getter=getUsername,setter=setUsername) NSString *user_name;
+@property (nonatomic, retain,getter=getPassword,setter=setPassword) NSString *password;
 @property (nonatomic, assign) NSInteger http_status_code;
 @property (nonatomic, retain) NSMutableDictionary *http_response_headers;
 

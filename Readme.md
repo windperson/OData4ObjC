@@ -1,6 +1,7 @@
 OData4ObjC
 ==================
 OData4ObjC is an open-source toolkit to access and manipulate OData in Objective C.
+
 This SDK supports up to iOS 6.
 
 
@@ -46,7 +47,6 @@ Do you need help using the project, or do you want to request a feature or bug f
 
 * To get some help: use the [Discussions tool on our CodePlex project page](http://odataobjc.codeplex.com/discussions).
 
-( I monitor this forum. )
 
 
 Contributing

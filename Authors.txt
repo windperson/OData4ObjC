@@ -1,0 +1,5 @@
+Contributing Authors
+=====================
+
+forked from OData / OData4ObjC
+Elizabeth Duncan <eduncan@continuuminnovation.com, elizabeth.duncan@students.olin.edu>

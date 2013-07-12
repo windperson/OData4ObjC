@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -63,10 +63,10 @@
 
 @property ( nonatomic ,	assign , getter=getMediaLinkEntry ,	setter=setMediaLinkEntry:	) BOOL m_mediaLinkEntry;
 @property ( nonatomic , retain , getter=getMediaContentUri, setter=setMEdiaContentUri:	) NSString *m_mediaContentUri;
-@property ( nonatomic , retain , getter=getEditMediaLink ,	setter=setEditMediaLink	:	) NSString *m_editMediaLink;
+@property ( nonatomic , retain , getter=getEditMediaLink ,	setter=setEditMediaLink:	) NSString *m_editMediaLink;
 @property ( nonatomic , retain , getter=getStreamETag ,		setter=setStreamETag:		) NSString *m_streamETag;
 @property ( nonatomic , retain , getter=getEntityETag ,		setter=setEntityETag:		) NSString *m_entityETag;
-@property ( nonatomic , retain , getter=getIdentity	,		setter=setIdentity	:		) NSString *m_identity;
+@property ( nonatomic , retain , getter=getIdentity	,		setter=setIdentity:			) NSString *m_identity;
 
 - (id) init;
 

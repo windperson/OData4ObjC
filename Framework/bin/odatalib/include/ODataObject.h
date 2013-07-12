@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 #import "mProperties.h"
 #import "ODataBool.h"
 
-@interface ODataObject : NSObject{
+@interface ODataObject : NSObject/*<NSCopying>*/{
 
 	/**
      * variable holding unique id (GUID)
@@ -37,12 +37,12 @@
 }
 
 @property ( nonatomic, retain, getter=getObjectID,		   setter=setObjectID:         ) NSString *m_objectID;
-@property ( nonatomic, retain, getter=getEntityMap,		   setter=setEntityMap	:	  )NSMutableDictionary *m_OData_entityMap;
-@property ( nonatomic, retain, getter=getEntityKey,		   setter=setEntityKey	:	  )NSMutableDictionary *m_OData_entityKey;
+@property ( nonatomic, retain, getter=getEntityMap,		   setter=setEntityMap:		  )NSMutableDictionary *m_OData_entityMap;
+@property ( nonatomic, retain, getter=getEntityKey,		   setter=setEntityKey:		  )NSMutableDictionary *m_OData_entityKey;
 @property ( nonatomic, retain, getter=getRelLinks,		   setter=setRelLinks:		  )NSMutableArray *m_OData_relLinks;
-@property ( nonatomic, retain, getter=getBaseURI,		   setter=setBaseURI	:	  )NSString *m_OData_baseURI;
+@property ( nonatomic, retain, getter=getBaseURI,		   setter=setBaseURI:		  )NSString *m_OData_baseURI;
 @property ( nonatomic, retain, getter=getEntityFKRelation, setter=setEntityFKRelation: )NSMutableDictionary *m_OData_entityFKRelation;
-@property ( nonatomic, retain, getter=getEtag,			   setter=setEtag    :         )NSString *m_OData_etag;
+@property ( nonatomic, retain, getter=getEtag,			   setter=setEtag:             )NSString *m_OData_etag;
 - (id) init;
 - (id) initWithUri:(NSString*)anUri;
 - (id) getActualEntityTypeName:(id)aKey;

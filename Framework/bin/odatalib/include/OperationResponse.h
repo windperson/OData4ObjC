@@ -1,5 +1,5 @@
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -36,8 +36,8 @@
 
 }
 
-@property ( nonatomic , retain , getter=getInnerException , setter=setInnerException ) NSString * m_innerException;
-@property ( nonatomic , assign , getter=getStatusCode ,		setter=setStatusCode	 ) NSInteger m_statusCode;
+@property ( nonatomic , retain , getter=getInnerException , setter=setInnerException: ) NSString * m_innerException;
+@property ( nonatomic , assign , getter=getStatusCode ,		setter=setStatusCode:	 ) NSInteger m_statusCode;
 
 
 - (id) initWithHeaders:(NSDictionary*)aHeaders errorMsg:(NSString*)anErrorMsg statusCode:(NSInteger)aStatusCode;

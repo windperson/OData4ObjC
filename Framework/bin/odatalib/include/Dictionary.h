@@ -1,5 +1,5 @@
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -35,6 +35,7 @@
 - (void) addObject:(ODataObject*)aKey value:(id) aValue;
 - (void) add:(id)aKey value:(id) aValue;
 
+- (BOOL) remove:(id)aKey;
 - (BOOL) remove:(id)aKey;
 - (void) removeAll;
 

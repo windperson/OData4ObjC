@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -27,8 +27,8 @@
 	ObjectContext *m_context;
 }
 
-@property (nonatomic, retain,getter=getHTTPRequest, setter=setHTTPRequest)HttpRequest *m_httpRequest;
-@property (nonatomic, assign,getter=getContext, setter=setContext)ObjectContext *m_context;
+@property (nonatomic, retain,getter=getHTTPRequest, setter=setHTTPRequest:)HttpRequest *m_httpRequest;
+@property (nonatomic, assign,getter=getContext, setter=setContext:)ObjectContext *m_context;
 
 -(id)initWithUri:(NSString *)uri batchBoundary:(NSString *)batchBounds batchRequestBody:(NSString *)body 
 	   credentials:(id)credential batchHeaders:(NSMutableDictionary *)headers 

@@ -1,6 +1,6 @@
 
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -53,12 +53,12 @@
 	NSMutableDictionary *m_nameSpaceMap;
 }
 
-@property(nonatomic,assign,getter=getParentElement,setter=setParentElement) ODataXMLElements *m_parentElement;
-@property(nonatomic,retain,getter=getName,setter=setName) NSString *m_name;
-@property(nonatomic,retain,getter=getStringValue,setter=setStringValue) NSString *m_stringValue;
-@property(nonatomic,retain,getter=getChildren,setter=setChildren) NSMutableArray  *m_children;
-@property(nonatomic,assign,getter=getAttributes,setter=setAttributes) NSMutableDictionary *m_attributes;
-@property(nonatomic,retain,getter=getNameSpaceMap,setter=setNameSpaceMap) NSMutableDictionary *m_nameSpaceMap;
+@property(nonatomic,assign,getter=getParentElement,setter=setParentElement:) ODataXMLElements *m_parentElement;
+@property(nonatomic,retain,getter=getName,setter=setName:) NSString *m_name;
+@property(nonatomic,retain,getter=getStringValue,setter=setStringValue:) NSString *m_stringValue;
+@property(nonatomic,retain,getter=getChildren,setter=setChildren:) NSMutableArray  *m_children;
+@property(nonatomic,assign,getter=getAttributes,setter=setAttributes:) NSMutableDictionary *m_attributes;
+@property(nonatomic,retain,getter=getNameSpaceMap,setter=setNameSpaceMap:) NSMutableDictionary *m_nameSpaceMap;
 
 -(id)init;
 -(NSArray *)elementsForName:(NSString *)elementName;

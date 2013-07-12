@@ -1,5 +1,5 @@
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@
 	
 }
 
-@property (nonatomic,retain,getter=getNameSpace,	setter=setNameSpace)	NSString *m_nameSpace;
-@property (nonatomic,retain,getter=getNameSpaceURI,	setter=setNameSpaceURI)	NSString *m_nameSpaceURI;
+@property (nonatomic,retain,getter=getNameSpace,	setter=setNameSpace:)	NSString *m_nameSpace;
+@property (nonatomic,retain,getter=getNameSpaceURI,	setter=setNameSpaceURI:)	NSString *m_nameSpaceURI;
 
 -(id) initWithNameSpace:(NSString*) aNameSpace nameSpaceURI:(NSString*)aNameSpaceURI;
 -(BOOL) isDataServiceNameSpace;

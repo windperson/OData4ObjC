@@ -1,5 +1,5 @@
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -25,10 +25,10 @@
 	NSInteger m_statusCode;
 }
 
-@property ( nonatomic , assign , getter=IsBatchResponse ,		setter=setBatchResponse		) BOOL m_batchResponse;
-@property ( nonatomic , retain , getter=getBatchHeaders ,		setter=setHeaders			) NSString *m_headers;
-@property ( nonatomic , retain , getter=getOperationResponse ,	setter=setOperationResponse	) NSMutableArray *m_operationResponse;
-@property ( nonatomic , assign , getter=getBatchStatusCode ,	setter=setStatusCode		) NSInteger m_statusCode;
+@property ( nonatomic , assign , getter=IsBatchResponse ,		setter=setBatchResponse:		) BOOL m_batchResponse;
+@property ( nonatomic , retain , getter=getBatchHeaders ,		setter=setHeaders:				) NSString *m_headers;
+@property ( nonatomic , retain , getter=getOperationResponse ,	setter=setOperationResponse:	) NSMutableArray *m_operationResponse;
+@property ( nonatomic , assign , getter=getBatchStatusCode ,	setter=setStatusCode:			) NSInteger m_statusCode;
 
 - (id) initWithHeader:(NSString*)aHeader statusCode:(NSInteger)aStatusCode operationResponse:(NSMutableArray*)anOperationResponse batchResponse:(BOOL)aBatchResponse;
 

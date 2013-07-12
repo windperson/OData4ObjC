@@ -1,5 +1,5 @@
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-#import "ErrorDelegate.h"
+
 
 @interface HTTPHandler : NSObject 
 {
@@ -59,17 +59,14 @@
 	BOOL done;
 	
 	NSTimeInterval timeInterval;
-	
-	id<ErrorDelegate> errDelegate;
 }
 
 @property (nonatomic, retain) NSMutableData *http_response;
 @property (nonatomic, retain) NSError * http_error;
 @property (nonatomic, assign) NSInteger http_status_code;
 @property (copy) NSMutableDictionary *http_response_headers;
-@property ( nonatomic, assign, getter=getTimeInterval, setter=setTimeInterval) NSTimeInterval timeInterval;
+@property ( nonatomic, assign, getter=getTimeInterval, setter=setTimeInterval:) NSTimeInterval timeInterval;
 
-@property(nonatomic,assign, getter=getErrorDelegate ,setter=setErrorDelegate)id<ErrorDelegate> errDelegate;
 
 -(void)performHTTPRequest:(NSString *)url username:(NSString *)usr password:(NSString *)pwd headers:(NSMutableDictionary *)dict httpbody:(NSData *)body httpmethod:(NSString *)method;
 - (NSString *) getHTMLFriendlyBody;

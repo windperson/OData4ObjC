@@ -1,5 +1,5 @@
 /*
- Copyright 2010 Microsoft Corp
+ Copyright 2010 OuterCurve Foundation
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@
 }
 
 @property ( nonatomic , assign , getter=IsKnownMemoryStream	,	setter=setKnownMemoryStream:	) BOOL m_knownMemoryStream;
-@property ( nonatomic , retain , getter=getStream ,				setter=setStream:			) NSData *m_stream;
+@property ( nonatomic , retain , getter=getStream ,				setter=setStream:				) NSData *m_stream;
 
 - (id) initWithStream:(NSData*)aStream isKnownMemoryStream:(BOOL) aKnownMemoryStream;
 

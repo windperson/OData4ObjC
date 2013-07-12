@@ -289,7 +289,7 @@ xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
 	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
 	<xsl:for-each select="schema_1_0:Property | schema_1_1:Property | schema_1_2:Property">	<xsl:if test="@m:FC_TargetPath">[syndicateArray addObject:@"m_<xsl:value-of select="@Name"/>"];
 	</xsl:if>	</xsl:for-each>
-	return NULL;
+	return syndicateArray;
 }
 -(<xsl:value-of select="$modified_service_namespace"/>_<xsl:value-of select="@Name"/> *)getDeepCopy
 {
@@ -297,7 +297,7 @@ xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
 <xsl:for-each select="schema_1_0:Property | schema_1_1:Property | schema_1_2:Property">	[obj set<xsl:value-of select="@Name"/>:[self get<xsl:value-of select="@Name"/>]];
 </xsl:for-each><xsl:for-each select="schema_1_0:NavigationProperty | schema_1_1:NavigationProperty | schema_1_2:NavigationProperty">	[obj set<xsl:value-of select="@Name"/>:[self get<xsl:value-of select="@Name"/>]];
 </xsl:for-each>
-	return NULL;
+	return obj;
 }
 - (void) dealloc
 {

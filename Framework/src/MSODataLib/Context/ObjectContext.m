@@ -32,7 +32,7 @@
 
 @implementation ObjectContext
 @synthesize m_objectContextdelegate , m_oDataDelegate;
-
+@synthesize m_entityFKRelation;
 @synthesize m_delegate;
 @synthesize m_baseUri, m_baseUriWithSlash, m_serviceNamespace;
 @synthesize m_nextChange, m_accept;

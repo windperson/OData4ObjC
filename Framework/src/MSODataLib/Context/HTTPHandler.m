@@ -58,8 +58,8 @@
 	{
 		id key, value;
 		NSArray *keys = [dict allKeys];
-		int count = [keys count];
-		for (int i = 0; i < count; i++)
+		NSUInteger count = [keys count];
+		for (NSUInteger i = 0; i < count; i++)
 		{
 			key = [keys objectAtIndex: i];
 			value = [dict objectForKey: key];
@@ -97,8 +97,8 @@
 	{
 		id key, value;
 		NSArray *keys = [dict allKeys];
-		int count = [keys count];
-		for (int i = 0; i < count; i++)
+		NSUInteger count = [keys count];
+		for (NSUInteger i = 0; i < count; i++)
 		{
 			key = [keys objectAtIndex: i];
 			value = [dict objectForKey: key];

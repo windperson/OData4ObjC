@@ -200,7 +200,7 @@
  */
 - (DataServiceQuery*) top:(NSInteger)count
 {
-	NSString *str = [[NSString alloc] initWithFormat:@"%d",count];
+	NSString *str = [[NSString alloc] initWithFormat:@"%ld",(long)count];
 	return [self addQueryOption:@"$top" query:[str autorelease]];
 }
 
@@ -214,7 +214,7 @@
  */
 - (DataServiceQuery*) skip:(NSInteger)count
 {
-	NSString *str = [[NSString alloc] initWithFormat:@"%d",count];
+	NSString *str = [[NSString alloc] initWithFormat:@"%ld",(long)count];
 	return [self addQueryOption:@"$skip" query:[str autorelease]];
 }
 
@@ -320,8 +320,7 @@
  */
 - (NSString*) requestUri
 {
-	NSString * tmp = [NSString stringWithFormat:@"%@?%@",[self buildQueryOption]];
-	return tmp;
+	return  [self buildQueryOption];
 }
 
 -(void) clearAllOptions

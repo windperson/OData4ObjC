@@ -66,9 +66,8 @@
 	
 	[theElement saveElementsForName:@"link" inArray:links];
 	
-	int linkcount = [links count];
-	int i =0;
-	for(i=0;i<linkcount;i++)
+	NSUInteger linkcount = [links count];
+	for(NSUInteger i=0;i<linkcount;i++)
 	{
 		ODataXMLElements *element = [links objectAtIndex:i];
 		NSString *nextlink = [self getAttributeValue:element varname:@"rel"];
@@ -333,11 +332,11 @@
 	
 	[theElement saveElementsForName:atomEntry inArray:entries];
 	
-	int count = [entries count];
+	
 	NSMutableArray *class_objects = nil;
 	id firstobject = nil;
     
-	for(int i =0;i<count;i++)
+	for(NSUInteger i = 0;i < [entries count];i++)
 	{		
 		id entry = [self EnumerateEntry:[entries objectAtIndex:i] parent:parentObject];
 		if(entry != nil)
@@ -362,11 +361,8 @@
 		else
 			atomLink=@"link";
 		[theElement saveElementsForName:atomLink inArray:links];
-		
-		int linkcount = [links count];
-	
-		int i =0;
-		for(i=0;i<linkcount;i++)
+		    
+		for(NSUInteger i = 0; i < [links count]; i++)
 		{
 			ODataXMLElements *element = [links objectAtIndex:i];
 			NSString *nextlink = [self getAttributeValue:element varname:@"rel"];
@@ -515,9 +511,8 @@
 		else
 			atomLink=@"link";
 		[theElement saveElementsForName:atomLink inArray:links];
-		
-		int count = [links count];
-		for(int i =0;i<count;i++)
+
+		for(NSUInteger i = 0; i < [links count]; i++)
 		{
 			ODataXMLElements *element = [links objectAtIndex:i];
 		
@@ -564,8 +559,7 @@
 		atomLink=@"link";
 	[theElement saveElementsForName:atomLink inArray:links];
 	
-	int count = [links count];
-	for(int i =0;i<count;i++)
+	for(NSUInteger i = 0; i < [links count]; i++)
 	{
 		ODataXMLElements *element = [links objectAtIndex:i];
 		NSString *attributename = [self getAttributeValue:element varname:@"rel"];
@@ -597,8 +591,8 @@
 		[theElement saveElementsForName:atomContent inArray:content];
 		
 		
-		count = [content count];
-		for(int i =0;i<count;i++)
+		
+		for(NSUInteger i = 0; i < [content count]; i++)
 		{
 			ODataXMLElements *element = [content objectAtIndex:i];
 			NSString *attributename = [self getAttributeValue:element varname:@"src"];
@@ -641,8 +635,8 @@
 	NSMutableArray *links = [[NSMutableArray alloc]init];
 	[theElement saveElementsForName:@"link" inArray:links];
 	
-	int count = [links count];
-	for(int i =0;i<count;i++)
+
+	for(NSUInteger i = 0; i < [links count]; i++)
 	{
 		ODataXMLElements *element = [links objectAtIndex:i];
 		NSString *attributename = [self getAttributeValue:element varname:@"rel"];
@@ -658,8 +652,7 @@
 	NSMutableArray *content = [[NSMutableArray alloc]init];
 	[theElement saveElementsForName:@"content" inArray:content];
 	
-	count = [content count];
-	for(int i =0;i<count;i++)
+	for(NSUInteger i = 0; i < [content count]; i++)
 	{
 		ODataXMLElements *element = [content objectAtIndex:i];
 		NSString *attributename = [self getAttributeValue:element varname:@"src"];
@@ -670,8 +663,7 @@
 	NSMutableArray *editLink = [[NSMutableArray alloc]init];
 	[theElement saveElementsForName:@"id" inArray:editLink];
 	
-	count = [editLink count];
-	for(int i =0;i<count;i++)
+	for(NSUInteger i =0;i < [editLink count];i++)
 	{
 		ODataXMLElements *element = [editLink objectAtIndex:i];
 		NSInteger index = [Utility reverseFind:[element getStringValue] findString:@"/"];
@@ -762,9 +754,10 @@
 		element = [array objectAtIndex:0];
 	
 
+    //TODO: refactor below
 	NSArray *arrayelements = [element getChildren];
 	NSArray *elementproperties = nil;
-	int count = 0;
+	NSUInteger count = 0;
 
 	if([arrayelements count] > 0)
 	{
@@ -1156,8 +1149,8 @@
 	
 	NSArray *SyndicateKeys = [object getSyndicateArray];
 	XMLGenerator *xml = [[XMLGenerator alloc] initWithString:@""];
-	
-	for(int j = [SyndicateKeys count] - 1 ; j>=0 ;j--)
+
+	for(long long j = [SyndicateKeys count] - 1; j >= 0 ;j++)
 	{
 		NSString *syndvarname = [SyndicateKeys objectAtIndex:j];
 		//get syndicate properties

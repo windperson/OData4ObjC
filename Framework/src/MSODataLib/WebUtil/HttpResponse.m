@@ -49,7 +49,7 @@
 			[self setHttpMessage:message];
 		else
 		{
-			NSString* tmpCode = [NSString stringWithFormat:@"%d",aCode];
+			NSString* tmpCode = [NSString stringWithFormat:@"%ld",(long)aCode];
 			[self setHttpMessage:[self retriveStatusMessage:tmpCode]];
 		}
 	}

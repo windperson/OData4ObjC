@@ -130,7 +130,7 @@
 { 
 	NSString *xmlstring = @"";
 	NSArray *keys;
-	int i, count;
+	NSUInteger i, count;
 	id key, value;
 	
 	keys = [dict allKeys];

@@ -124,7 +124,7 @@
 			[dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SS'Z'"];
 		}else {
 			NSArray *array = [value componentsSeparatedByString:@"T"];
-			int cnt = [[[array objectAtIndex:1] componentsSeparatedByString:@":"] count];
+			NSUInteger cnt = [[[array objectAtIndex:1] componentsSeparatedByString:@":"] count];
 			if(cnt == 2)
 				[dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm'Z'"];
 			else if(cnt == 3)
@@ -157,7 +157,7 @@
 	if(object == nil)
 		return;
 	
-	NSUInteger count;
+	unsigned int count;
 	Ivar *vars	= class_copyIvarList([object class], &count);
 	
 	for (int i=0; i<count; i++) 

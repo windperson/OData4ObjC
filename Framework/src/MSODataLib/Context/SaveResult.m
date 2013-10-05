@@ -82,8 +82,8 @@
 		Dictionary *mergedDictionary = [Dictionary Merge:[m_context getObjectToResource] dictionary2:[m_context getBindings] propertyName:@"State" propertyValue:Unchanged condition:NO];
 		
 		m_changedEntries = [[mergedDictionary sortObjects] retain];
-		[self setBatchBoundary:[NSString stringWithFormat:@"batch_%@",[ODataGUID GetNewGuid]]];
-		[self setChangesetBoundry:@""];
+		[self setBatchBoundary:[NSMutableString stringWithFormat:@"batch_%@",[ODataGUID GetNewGuid]]];
+		[self setChangesetBoundry:[NSMutableString stringWithString:@""]];
 		self.m_completed = NO;
 		
 		self.m_processingMediaLinkEntry = NO;
@@ -121,7 +121,7 @@
  */
 - (void) batchRequest:(BOOL) aReplaceOnUpdateOption
 {			
-	[self setChangesetBoundry:[NSString stringWithFormat:@"changeset_%@",[ODataGUID GetNewGuid]]];
+	[self setChangesetBoundry:[NSMutableString stringWithFormat:@"changeset_%@",[ODataGUID GetNewGuid]]];
 	NSUInteger changedEntriesCount = [m_changedEntries count];
 	
 	if(changedEntriesCount > 0)
@@ -168,7 +168,7 @@
 {		
 	[m_changesetBoundry release];
 	m_changesetBoundry = nil;
-	[self setChangesetBoundry:[NSString stringWithFormat:@"changeset_%@",[ODataGUID GetNewGuid]]];
+	[self setChangesetBoundry:[NSMutableString stringWithFormat:@"changeset_%@",[ODataGUID GetNewGuid]]];
 	NSUInteger changedEntriesCount = [m_changedEntries count];
 	
 	if(changedEntriesCount > 0)
@@ -188,14 +188,14 @@
 				if (changesetBody != nil)
 				{
 					[changesetHeader appendString:@"\n"];
-					[Utility WriteLine:[NSString stringWithFormat:@"Content-Length: %d",[changesetBody length]] inStream:changesetHeader];
+					[Utility WriteLine:[NSString stringWithFormat:@"Content-Length: %lu",(unsigned long)[changesetBody length]] inStream:changesetHeader];
 				}
 				[Utility WriteLine:@"" inStream:changesetHeader];
 				
 				NSString *tmp = [[NSString alloc] initWithFormat:@"%@%@",m_batchRequestBody,changesetHeader];
 				[m_batchRequestBody release];
 				m_batchRequestBody = nil;
-				[self setBatchRequestBody:[NSString stringWithString:tmp]];
+				[self setBatchRequestBody:[NSMutableString stringWithString:tmp]];
 				[tmp release];
 				
 				if(changesetBody != nil)
@@ -203,7 +203,7 @@
 					tmp = [[NSString alloc] initWithFormat:@"%@%@",m_batchRequestBody,changesetBody];
 					[m_batchRequestBody release];
 					m_batchRequestBody = nil;
-					[self setBatchRequestBody:[NSString stringWithString:tmp]];
+					[self setBatchRequestBody:[NSMutableString stringWithString:tmp]];
 					[tmp release];
 				}
 			}
@@ -665,7 +665,7 @@
 	if(targetResourcebox != nil)
 	{
 		if([targetResourcebox getState] == Added || [targetResourcebox getState] == Modified)
-			targetObjectUri = [NSString stringWithFormat:@"$%d",[targetResourcebox getChangeOrder]];
+			targetObjectUri = [NSString stringWithFormat:@"$%ld",(long)[targetResourcebox getChangeOrder]];
 		else
 			targetObjectUri = [targetResourcebox getEditMediaResourceUri:[m_context getBaseUriWithSlash]];
 	}
@@ -718,7 +718,7 @@
 	NSMutableString *changesetHeaderForResource = [[NSMutableString alloc] init];
 	NSString *resourceUri = [aResourceBox getResourceUri:[m_context getBaseUriWithSlash]];
 	[self writeOperationRequestHeaders:changesetHeaderForResource methodName:entityHttpMethod uri:resourceUri];
-	[Utility WriteLine:[NSString stringWithFormat:@"Content-ID: %d",[aResourceBox getChangeOrder]] inStream:changesetHeaderForResource];
+	[Utility WriteLine:[NSString stringWithFormat:@"Content-ID: %ld",(long)[aResourceBox getChangeOrder]] inStream:changesetHeaderForResource];
 	[Utility WriteLine:[NSString stringWithFormat:@"Accept: %@" , [m_context getAccept]] inStream:changesetHeaderForResource];
 
 	if([[aResourceBox getHeaders] count] > 0 )
@@ -775,7 +775,7 @@
 								
 	if (Deleted != [aResourceBox getState])
 	{
-			[Utility WriteLine:[NSString stringWithString:@"Content-Type: application/atom+xml;type=entry;charset=utf-8"] inStream:changesetHeaderForResource];
+			[Utility WriteLine:@"Content-Type: application/atom+xml;type=entry;charset=utf-8" inStream:changesetHeaderForResource];
 	}
 	return [changesetHeaderForResource autorelease];
 }
@@ -813,7 +813,7 @@
 	
 	if (Added == [sourceResourceBox getState] || Modified == [sourceResourceBox getState])
 	{
-		absoluteUri = [NSString stringWithFormat:@"$%d/$links/%@",[sourceResourceBox getChangeOrder],uri];
+		absoluteUri = [NSString stringWithFormat:@"$%ld/$links/%@",(long)[sourceResourceBox getChangeOrder],uri];
 	}
 	else
 	{
@@ -826,7 +826,7 @@
 		[self writeOperationRequestHeaders:changesetHeaderForBinding methodName:[self getBindingHttpMethod:aRelatedEnd] uri:absoluteUri];
 	[Utility WriteLine:@"DataServiceVersion: 1.0;Objective-C" inStream:changesetHeaderForBinding];
 	[Utility WriteLine:[NSString stringWithFormat:@"Accept: %@" , [m_context getAccept]] inStream:changesetHeaderForBinding];
-	[Utility WriteLine:[NSString stringWithFormat:@"Content-ID: %d" ,[aRelatedEnd getChangeOrder]] inStream:changesetHeaderForBinding];
+	[Utility WriteLine:[NSString stringWithFormat:@"Content-ID: %ld" ,(long)[aRelatedEnd getChangeOrder]] inStream:changesetHeaderForBinding];
 	
 	if ( (nil != [aRelatedEnd getTargetResource]) && ( (Added == [aRelatedEnd getState]) || (Modified == [aRelatedEnd getState])))
 	{
@@ -1514,12 +1514,12 @@
 	if(!(m_processingMediaLinkEntry && m_processingMediaLinkEntryPut))
 	{
 		ResourceBox *resourceBox = [m_changedEntries objectAtIndex:m_entryIndex];
-		NSNumber * number = [[NSNumber alloc] initWithInt:[resourceBox getChangeOrder]];
+		NSNumber * number = [[NSNumber alloc] initWithInteger:[resourceBox getChangeOrder]];
 		if([m_changeOrderIDToHttpStatus objectForKey:number] != nil)
 		{
 			[m_changeOrderIDToHttpStatus removeObjectForKey:number];
 		}
-		NSNumber *httpcode = [[NSNumber alloc] initWithInt:aHttpCode];
+		NSNumber *httpcode = [[NSNumber alloc] initWithInteger:aHttpCode];
 		[m_changeOrderIDToHttpStatus setObject:httpcode forKey:number];
 		[number release];
 		[httpcode release];

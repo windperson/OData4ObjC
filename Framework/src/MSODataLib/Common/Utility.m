@@ -714,9 +714,8 @@ static NSString *const REQUEST_GET  = @"GET";
 	{
 		return nil;
 	}
-	
-	
-	int length = [anInputString length];
+		
+	NSUInteger length = [anInputString length];
 	const char* inBuf = [anInputString cStringUsingEncoding:NSASCIIStringEncoding];
 	size_t outBufLength =
 	((length+BASE64_SIZE-1) / BASE64_SIZE) * BINARY_SIZE;

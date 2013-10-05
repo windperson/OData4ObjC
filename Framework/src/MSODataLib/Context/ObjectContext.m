@@ -474,7 +474,7 @@
 	@try 
 	{
         NSLog(@"Batch: %d", Batch);
-        NSLog(@"m_saveChangesOptions: %d", self.m_saveChangesOptions);
+        NSLog(@"m_saveChangesOptions: %ld", (long)self.m_saveChangesOptions);
         NSLog(@"m_saveChangesOptions: %d", self.m_replaceOnUpdateOption);
         
 		if(self.m_saveChangesOptions == Batch)
@@ -647,8 +647,8 @@
 	{
 		id key, value;
 		NSArray *keys = [custom_headers allKeys];
-		int count = [keys count];
-		for (int i = 0; i < count; i++)
+		NSUInteger count = [keys count];
+		for (NSUInteger i = 0; i < count; i++)
 		{
 			key = [keys objectAtIndex: i];
 			value = [custom_headers objectForKey: key];
@@ -1010,7 +1010,7 @@
 	if(arrOfAssociation == nil)
 		@throw [NSException exceptionWithName:@"Invalid Operation" reason:Resource_RelationNotRefOrCollection userInfo:nil];
 	
-	int count=[arrOfAssociation count];
+	NSUInteger count=[arrOfAssociation count];
 	for(int z = 0; z < count; z++)
 	{
 		if([[[arrOfAssociation objectAtIndex:z] objectForKey:@"EndRole"] isEqualToString:toRole])
@@ -1556,7 +1556,7 @@
 
 -(void) setEntitiesWithArray:(NSArray *)anArray
 {
-	[self setEntities:[[[NSArray alloc]initWithArray:anArray] autorelease] ];
+	[self setEntities:[[[NSMutableArray alloc]initWithArray:anArray] autorelease] ];
 }
 
 
@@ -1629,8 +1629,8 @@
 - (NSMutableArray *)getCopy:(NSArray *)queryOperationResponseArray
 {
 	NSMutableArray *tempArray=[[NSMutableArray alloc]init];
-	int count=[queryOperationResponseArray count];
-	for (int i=0; i<count; i++) 
+	NSUInteger count=[queryOperationResponseArray count];
+	for (NSUInteger i=0; i<count; i++)
 	{
 		id obj=[[queryOperationResponseArray objectAtIndex:i] getDeepCopy];
 		[tempArray addObject:obj];
@@ -1691,9 +1691,8 @@
 	{
 		NSArray* arrOfObjects=[aParam allValues];
 		NSArray* arrOfKeys=[aParam allKeys];
-		
-		int count=[arrOfKeys count];
-		if (count)
+
+		if ([arrOfKeys count] > 0)
 		{
 			id obj=[arrOfObjects objectAtIndex:0];
 			id key=[arrOfKeys objectAtIndex:0];
@@ -1711,7 +1710,7 @@
 				else 
 					anUrl=[anUrl stringByAppendingFormat:@"?%@=%@",key,obj];
 			}
-			for (int i=1; i<count; i++) 
+			for (NSUInteger i=1; i<[arrOfKeys count]; i++)
 			{
 				obj=[arrOfObjects objectAtIndex:i];
 				key=[arrOfKeys objectAtIndex:i];

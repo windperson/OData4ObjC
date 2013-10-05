@@ -187,6 +187,7 @@
 	return [headers autorelease];
 }
 
+//TODO :Does it really necessary to do Base64 encoding in such raw way?
 - (NSString *)base64encoding:(unsigned const char*)aBytesBuffer
 {
 	char *base64_chars = 
@@ -200,7 +201,7 @@
 	unsigned char char_array_3[3];
 	unsigned char char_array_4[4];
 
-	int length = strlen((const char*)aBytesBuffer);
+	size_t length = strlen((const char*)aBytesBuffer);
 	char ret[length];
 	
 	

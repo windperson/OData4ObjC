@@ -217,6 +217,7 @@
 	return value;
 }
 
+//TODO: replace bubbleSort with framework provided sorting API
 ///////////////////////////////////////////////////////////////////////////////
 + (NSMutableArray*)bubbleSortDictionaryByKeys:(NSDictionary*)dict
 {
@@ -234,8 +235,7 @@
 		return sortedKeys; //no sort needed
 	
 	//perform bubble sort on keys:
-	int n = [sortedKeys count] -1;
-	int i;
+	NSUInteger n = [sortedKeys count] -1;
 	BOOL swapped = YES;
 	
 	NSString *key1,*key2;
@@ -244,7 +244,7 @@
 	while(swapped)
 	{
 		swapped = NO;
-		for(i=0;i<n;i++)
+		for(NSUInteger i=0;i<n;i++)
 		{
 			key1 = [sortedKeys objectAtIndex: i];
 			key2 = [sortedKeys objectAtIndex: i+1];
@@ -279,13 +279,14 @@
 	return sortedKeys;
 }
 
+//TODO: replace this method implementation
 - (NSMutableArray *) sortObjects
 {
 	
 	NSMutableDictionary *sortedDictionary = [[NSMutableDictionary alloc]initWithCapacity:[m_entries count]];
 	
 	NSArray *keys;
-	int i, count;
+	NSUInteger i, count;
 	id key, value;
 	
 	keys = [m_entries allKeys];
@@ -296,8 +297,7 @@
 		value = [m_entries objectForKey: key];
 		
 		Pair *val = value;
-		[sortedDictionary setObject: value    
-								   forKey:[NSNumber numberWithInt:[val.m_value getChangeOrder]-1]];
+		[sortedDictionary setObject: value forKey:[NSNumber numberWithInteger:[val.m_value getChangeOrder]-1]];
 	}	
 	
 	NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -313,7 +313,7 @@
 	
 	while(1)
 	{		
-		Pair *objpair = [sortedDictionary objectForKey:[NSNumber numberWithInt:i]];
+		Pair *objpair = [sortedDictionary objectForKey:[NSNumber numberWithInteger:i]];
 		if(objpair)
 		{
 			[array addObject:[objpair getValue]];	

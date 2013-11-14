@@ -143,7 +143,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     http_error = [error retain];
 	done = YES;
-	@throw [NSException exceptionWithName:@"Connection error" reason:[NSString stringWithFormat:@"%@ Error Code:%d",[error localizedDescription],[error code]] userInfo:nil];
+	@throw [NSException exceptionWithName:@"Connection error" reason:[NSString stringWithFormat:@"%@ Error Code:%ld",[error localizedDescription],(long)[error code]] userInfo:nil];
 }
 
 /*

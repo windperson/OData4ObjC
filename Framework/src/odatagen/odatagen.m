@@ -20,10 +20,12 @@
 #import <Cocoa/Cocoa.h>
 #include <string.h>
 #include<stdio.h>
+
 #include <libxml/xmlmemory.h>
 #include <libxml/debugXML.h>
 #include <libxml/HTMLtree.h>
 #include <libxml/xmlIO.h>
+
 
 #include <libxml/xinclude.h>
 #include <libxml/catalog.h>
@@ -71,7 +73,8 @@ void CreateHeaderFile(const char * xmlfilename,const char* OutFileName)
 		@throw [NSException exceptionWithName:@"File Not Found" reason:@"objc_baseClasses.xsl file not found" userInfo:nil];
 	}
 	
-	isDir, exists = NO;
+	exists = NO;
+    isDir = NO;
 		
 	dirPath = [mainPath stringByAppendingString:@"/objc_headers.xsl"];
 	exists = [fileManager fileExistsAtPath:dirPath isDirectory:&isDir];
@@ -174,7 +177,8 @@ void CreateImplementationFile(const char * xmlfilename,const char* OutFileName,N
 NSString* getFileName(const char * xmlfilename)
 {
 	xsltStylesheetPtr cur = NULL;
-	xmlDocPtr doc, res;FILE *fp;
+	xmlDocPtr doc, res;
+    FILE *fp;
 	char filename[2048]={0};
 	BOOL isDir, exists = NO;
 	NSString *dirPath;
@@ -185,20 +189,26 @@ NSString* getFileName(const char * xmlfilename)
 		
 		dirPath = [mainPath stringByAppendingString:@"/objc_filename.xsl"];
 		exists = [fileManager fileExistsAtPath:dirPath isDirectory:&isDir];
-		if (exists) {
+		if (exists)
+        {
 			cur = xsltParseStylesheetFile((const xmlChar *)[dirPath UTF8String]);// .xsl
-			doc = xmlParseFile(xmlfilename);//Parse the Input File
+            doc = xmlParseFile((const char *)xmlfilename);//Parse the Input File
 			res=xsltApplyStylesheet(cur, doc, NULL);
 		}else
-			@throw [NSException exceptionWithName:@"File Not Found" reason:@"objc_filename.xsl file not found" userInfo:nil];
-	
+        {
+            @throw [NSException exceptionWithName:@"File Not Found" reason:@"objc_filename.xsl file not found" userInfo:nil];
+        }
+				
 	fp=fopen("filename", "w+");
 	if(fp==NULL)
-		printf("\nodatagen: Failed to get filename");
-	
+    {
+        printf("\nodatagen: Failed to get filename");
+    }
+			
 	xsltSaveResultToFile(fp, res, cur);
-	
-	int size=ftell(fp);
+
+	long size=ftell(fp);
+    
 	if(size>0)
 	{
 		fseek(fp, 0, SEEK_SET);
